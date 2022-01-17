@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "export": "next export",
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -18,7 +18,8 @@
     "@mui/material": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "recharts": "^2.1.8"
   },
   "devDependencies": {
     "@types/react": "latest",
