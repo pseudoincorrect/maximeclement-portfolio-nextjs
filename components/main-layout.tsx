@@ -1,7 +1,6 @@
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -15,6 +14,7 @@ import AppTopBar from './app-top-bar';
 interface MainLayoutProps {
   children?: React.ReactNode;
 }
+const sideWidth = 200;
 
 export default function MainLayout(props: MainLayoutProps) {
   const [open, setOpen] = useState(true);
@@ -23,8 +23,8 @@ export default function MainLayout(props: MainLayoutProps) {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppTopBar position='absolute' open={open}>
+    <Box sx={{ display: 'flex', width: '100%' }}>
+      <AppTopBar position='absolute' sideWidth={sideWidth} open={open}>
         <Toolbar sx={{ pr: '24px' }}>
           <IconButton
             edge='start'
@@ -40,16 +40,16 @@ export default function MainLayout(props: MainLayoutProps) {
           </IconButton>
           <Typography
             component='h1'
-            variant='h6'
+            variant='h4'
             color='inherit'
             noWrap
-            sx={{ flexGrow: 1 }}
+            sx={{ flexGrow: 1, padding: '1rem 0' }}
           >
             Maxime Clement IoT
           </Typography>
         </Toolbar>
       </AppTopBar>
-      <AppDrawer open={open}>
+      <AppDrawer sideWidth={sideWidth} open={open}>
         <Toolbar
           sx={{
             display: 'flex',
@@ -67,16 +67,12 @@ export default function MainLayout(props: MainLayoutProps) {
       <Box
         component='main'
         sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[100]
-              : theme.palette.grey[900],
           flexGrow: 1,
           height: '100vh',
           overflow: 'hidden',
+          pt: '5rem',
         }}
       >
-        <Toolbar />
         {props.children}
         <AppBottomBar />
       </Box>

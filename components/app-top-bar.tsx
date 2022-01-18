@@ -1,7 +1,6 @@
 import AppBar, { AppBarProps } from '@mui/material/AppBar';
-import { useTheme } from '@mui/material/styles';
+import { SxProps, useTheme } from '@mui/material/styles';
 
-const drawerWidth: number = 240;
 const ENTERING = 'entering';
 const LEAVING = 'leaving';
 
@@ -17,23 +16,24 @@ function appBarTransition(theme: any, entering: string) {
 
 interface AppTopBarProps extends AppBarProps {
   open: boolean;
+  sideWidth: number;
 }
 
 function AppTopBar(props: AppTopBarProps) {
   const theme = useTheme();
-  const { children, open } = props;
+  const { children, open, sideWidth } = props;
 
-  const styleClosed: any = {
+  const styleClosed: SxProps = {
     zIndex: theme.zIndex.drawer + 1,
     boxShadow:
       '0 6px 12px 0 rgba(0, 0, 0, 0.3), 0 8px 20px 0 rgba(0, 0, 0, 0.29);',
     transition: appBarTransition(theme, LEAVING),
   };
 
-  const styleOpen: any = {
+  const styleOpen: SxProps = {
     ...styleClosed,
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: sideWidth,
+    width: `calc(100% - ${sideWidth}px)`,
     transition: appBarTransition(theme, ENTERING),
   };
 

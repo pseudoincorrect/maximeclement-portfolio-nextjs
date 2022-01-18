@@ -3,11 +3,12 @@ import {
   CardContent,
   CardActions,
   Button,
-  CardProps,
-  styled,
   Typography,
+  SxProps,
+  useTheme,
 } from '@mui/material';
 import { Fragment } from 'react';
+import { hexToRGBA } from '../src/helpers';
 
 function TheCardContent() {
   return (
@@ -35,15 +36,16 @@ function TheCardContent() {
   );
 }
 
-const HomeCardStyle = {
-  borderWidth: '0.15rem',
-  borderStyle: 'solid',
-  width: '50vw',
-  borderColor: 'primary.main',
-  margin: '2rem',
-};
-
 function HomeCard() {
+  const theme = useTheme();
+
+  const HomeCardStyle: SxProps = {
+    borderWidth: '0.15rem',
+    borderStyle: 'solid',
+    backgroundColor: hexToRGBA(theme.palette.background.default, 0.1),
+    borderColor: 'primary.main',
+    margin: '2rem',
+  };
   return <Card sx={HomeCardStyle}>{TheCardContent()}</Card>;
 }
 

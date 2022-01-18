@@ -1,58 +1,56 @@
 import Drawer, { DrawerProps } from '@mui/material/Drawer';
-import { useTheme } from '@mui/material/styles';
+import { SxProps, useTheme } from '@mui/material/styles';
 
-const drawerWidth: number = 240;
 const ENTERING = 'entering';
 const LEAVING = 'leaving';
 
-function appDrawerTransition(theme: any, entering: string) {
-  return theme.transitions.create('width', {
-    easing: theme.transitions.easing.sharp,
-    duration:
-      entering == ENTERING
-        ? theme.transitions.duration.enteringScreen
-        : theme.transitions.duration.leavingScreen,
-  });
-}
-
 interface AppDrawerProps extends DrawerProps {
   open: boolean;
+  sideWidth: number;
 }
 
 function AppDrawer(props: AppDrawerProps) {
   const theme = useTheme();
+  const { children, open, sideWidth } = props;
 
-  const styleOpen: any = {
+  function openCloseTransition(entering: string) {
+    return theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration:
+        entering == ENTERING
+          ? theme.transitions.duration.enteringScreen
+          : theme.transitions.duration.leavingScreen,
+    });
+  }
+
+  const styleCommon: SxProps = {
+    position: 'relative',
+    whiteSpace: 'nowrap',
+    boxSizing: 'border-box',
+    overflowX: 'hidden',
+    boxShadow:
+      '0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 8px 30px 0 rgba(0, 0, 0, 0.29);',
+  };
+
+  const styleOpen: SxProps = {
     '& .MuiDrawer-paper': {
-      position: 'relative',
-      whiteSpace: 'nowrap',
-      width: drawerWidth,
-      transition: theme.transitions.create('width', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      boxSizing: 'border-box',
+      ...styleCommon,
+      width: sideWidth,
+      transition: openCloseTransition(ENTERING),
     },
   };
 
-  const styleClosed: any = {
+  const styleClosed: SxProps = {
     '& .MuiDrawer-paper': {
-      position: 'relative',
-      whiteSpace: 'nowrap',
-      boxSizing: 'border-box',
-      overflowX: 'hidden',
-      transition: theme.transitions.create('width', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
+      ...styleCommon,
       width: theme.spacing(7),
+      transition: openCloseTransition(LEAVING),
       [theme.breakpoints.up('sm')]: {
         width: theme.spacing(9),
       },
     },
   };
 
-  const { children, open } = props;
   return (
     <Drawer sx={open ? styleOpen : styleClosed} variant='permanent' open={open}>
       {children}
