@@ -1,14 +1,9 @@
 import Drawer, { DrawerProps } from '@mui/material/Drawer';
-import { styled, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 
 const drawerWidth: number = 240;
-
 const ENTERING = 'entering';
 const LEAVING = 'leaving';
-
-// interface DrawerProps extends MuiDrawerProps {
-//   open?: boolean;
-// }
 
 function appDrawerTransition(theme: any, entering: string) {
   return theme.transitions.create('width', {
@@ -20,33 +15,6 @@ function appDrawerTransition(theme: any, entering: string) {
   });
 }
 
-// function themeOnOpen(props: any) {
-//   const { theme, open } = props;
-//   return {
-//     '& .MuiDrawer-paper': {
-//       position: 'relative',
-//       whiteSpace: 'nowrap',
-//       width: drawerWidth,
-//       transition: appDrawerTransition(theme, ENTERING),
-//       boxSizing: 'border-box',
-//       boxShadow:
-//         '0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 8px 30px 0 rgba(0, 0, 0, 0.29);',
-//       ...(!open && {
-//         overflowX: 'hidden',
-//         transition: appDrawerTransition(theme, LEAVING),
-//         width: theme.spacing(7),
-//         [theme.breakpoints.up('sm')]: {
-//           width: theme.spacing(9),
-//         },
-//       }),
-//     },
-//   };
-// }
-
-// const AppDrawerOld = styled(MuiDrawer, {
-//   shouldForwardProp: (prop) => prop !== 'open',
-// })<MuiDrawerProps>(th emeOnOpen);
-
 interface AppDrawerProps extends DrawerProps {
   open: boolean;
 }
@@ -57,10 +25,9 @@ function AppDrawer(props: AppDrawerProps) {
   const styleOpen: any = {
     width: drawerWidth,
     flexShrink: 0,
+    transition: appDrawerTransition(theme, LEAVING),
     '& .MuiDrawer-paper': {
-      transition: appDrawerTransition(theme, ENTERING),
       width: drawerWidth,
-      boxSizing: 'border-box',
     },
   };
 

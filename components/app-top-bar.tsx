@@ -1,8 +1,7 @@
 import AppBar, { AppBarProps } from '@mui/material/AppBar';
-import { styled, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 
 const drawerWidth: number = 240;
-
 const ENTERING = 'entering';
 const LEAVING = 'leaving';
 
@@ -28,14 +27,14 @@ function AppTopBar(props: AppTopBarProps) {
     zIndex: theme.zIndex.drawer + 1,
     boxShadow:
       '0 6px 12px 0 rgba(0, 0, 0, 0.3), 0 8px 20px 0 rgba(0, 0, 0, 0.29);',
-    transition: appBarTransition(theme, ENTERING),
+    transition: appBarTransition(theme, LEAVING),
   };
 
   const styleOpen: any = {
     ...styleClosed,
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
-    transition: appBarTransition(theme, LEAVING),
+    transition: appBarTransition(theme, ENTERING),
   };
 
   return <AppBar sx={open ? styleOpen : styleClosed}>{children}</AppBar>;
