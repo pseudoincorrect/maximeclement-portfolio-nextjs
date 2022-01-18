@@ -104,11 +104,9 @@ export default function MainLayout(props: MainLayoutProps) {
           flexGrow: 1,
           height: '100vh',
           overflow: 'hidden',
-          padding: '1rem',
         }}
       >
         <Toolbar />
-        <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}></Container>
         {props.children}
       </Box>
     </Box>

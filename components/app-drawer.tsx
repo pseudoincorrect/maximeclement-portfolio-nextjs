@@ -3,14 +3,20 @@ import { styled } from '@mui/material/styles';
 
 const drawerWidth: number = 240;
 
+const ENTERING = 'entering';
+const LEAVING = 'leaving';
+
 interface DrawerProps extends MuiDrawerProps {
   open?: boolean;
 }
 
-function appDrawerTransition(theme: any) {
+function appDrawerTransition(theme: any, entering: string) {
   return theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.enteringScreen,
+    duration:
+      entering == ENTERING
+        ? theme.transitions.duration.enteringScreen
+        : theme.transitions.duration.leavingScreen,
   });
 }
 
@@ -21,14 +27,11 @@ function themeOnOpen(props: any) {
       position: 'relative',
       whiteSpace: 'nowrap',
       width: drawerWidth,
-      transition: appDrawerTransition(theme),
+      transition: appDrawerTransition(theme, ENTERING),
       boxSizing: 'border-box',
       ...(!open && {
         overflowX: 'hidden',
-        transition: theme.transitions.create('width', {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.leavingScreen,
-        }),
+        transition: appDrawerTransition(theme, LEAVING),
         width: theme.spacing(7),
         [theme.breakpoints.up('sm')]: {
           width: theme.spacing(9),

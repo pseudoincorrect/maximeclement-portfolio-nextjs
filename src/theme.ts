@@ -1,16 +1,25 @@
-import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
+import { createTheme } from '@mui/material/styles';
 
 // Create a theme instance.
 const theme = createTheme({
   typography: {
-    fontFamily: `"Montserrat", "Roboto", "Helvetica", "Arial", sans-serif`,
-    fontSize: 14,
-    fontWeightLight: 500,
-    fontWeightRegular: 600,
-    fontWeightMedium: 700,
+    fontFamily: `"Montserrat", "Arial", sans-serif`,
+    fontSize: 18,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
   },
   palette: {
+    mode: 'dark',
+    text: {
+      primary: '#ffffff',
+      secondary: '#ffffff',
+    },
+    background: {
+      default: '#333333',
+      paper: '#333333',
+    },
     primary: {
       main: '#556cd6',
     },

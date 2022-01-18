@@ -3,14 +3,20 @@ import { styled } from '@mui/material/styles';
 
 const drawerWidth: number = 240;
 
+const ENTERING = 'entering';
+const LEAVING = 'leaving';
+
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
 
-function appBarTransition(theme: any) {
+function appBarTransition(theme: any, entering: string) {
   return theme.transitions.create(['width', 'margin'], {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
+    duration:
+      entering == ENTERING
+        ? theme.transitions.duration.enteringScreen
+        : theme.transitions.duration.leavingScreen,
   });
 }
 
@@ -18,14 +24,11 @@ function appBarThemeOnOpen(props: any) {
   const { theme, open } = props;
   return {
     zIndex: theme.zIndex.drawer + 1,
-    transition: appBarTransition(theme),
+    transition: appBarTransition(theme, ENTERING),
     ...(open && {
       marginLeft: drawerWidth,
       width: `calc(100% - ${drawerWidth}px)`,
-      transition: theme.transitions.create(['width', 'margin'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
+      transition: appBarTransition(theme, LEAVING),
     }),
   };
 }
