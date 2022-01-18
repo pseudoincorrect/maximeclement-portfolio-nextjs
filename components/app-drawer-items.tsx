@@ -54,6 +54,7 @@ function AppDrawerItem(props: { data: AppDrawerItemData }) {
         console.log('lets go home');
         router.push(data.route);
       }}
+      sx={{ margin: '2rem 0' }}
     >
       <ListItemIcon>{data.icon}</ListItemIcon>
       <ListItemText primary={data.name} />

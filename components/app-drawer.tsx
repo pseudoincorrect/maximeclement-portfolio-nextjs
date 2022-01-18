@@ -23,32 +23,38 @@ function AppDrawer(props: AppDrawerProps) {
   const theme = useTheme();
 
   const styleOpen: any = {
-    width: drawerWidth,
-    flexShrink: 0,
-    transition: appDrawerTransition(theme, LEAVING),
     '& .MuiDrawer-paper': {
+      position: 'relative',
+      whiteSpace: 'nowrap',
       width: drawerWidth,
+      transition: theme.transitions.create('width', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+      boxSizing: 'border-box',
     },
   };
 
   const styleClosed: any = {
-    ...styleOpen,
-    overflowX: 'hidden',
-    transition: appDrawerTransition(theme, LEAVING),
-    width: theme.spacing(7),
-    [theme.breakpoints.up('sm')]: {
-      width: theme.spacing(9),
+    '& .MuiDrawer-paper': {
+      position: 'relative',
+      whiteSpace: 'nowrap',
+      boxSizing: 'border-box',
+      overflowX: 'hidden',
+      transition: theme.transitions.create('width', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      }),
+      width: theme.spacing(7),
+      [theme.breakpoints.up('sm')]: {
+        width: theme.spacing(9),
+      },
     },
   };
 
   const { children, open } = props;
   return (
-    <Drawer
-      sx={open ? styleOpen : styleClosed}
-      variant='persistent'
-      anchor='left'
-      open={open}
-    >
+    <Drawer sx={open ? styleOpen : styleClosed} variant='permanent' open={open}>
       {children}
     </Drawer>
   );
