@@ -33,8 +33,8 @@ function appBarThemeOnOpen(props: any) {
   };
 }
 
-const AppBar = styled(MuiAppBar, {
+const AppTopBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(appBarThemeOnOpen);
 
-export default AppBar;
+export default AppTopBar;

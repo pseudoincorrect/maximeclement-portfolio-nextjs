@@ -1,22 +1,16 @@
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import DashboardIcon from '@mui/icons-material/Dashboard';
 import MenuIcon from '@mui/icons-material/Menu';
-import PeopleIcon from '@mui/icons-material/People';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 
-import AppBar from './app-bar';
+import AppBottomBar from './app-bottom-bar';
 import AppDrawer from './app-drawer';
+import AppDrawerItems from './app-drawer-items';
+import AppTopBar from './app-top-bar';
 
 interface MainLayoutProps {
   children?: React.ReactNode;
@@ -30,12 +24,8 @@ export default function MainLayout(props: MainLayoutProps) {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <AppBar position='absolute' open={open}>
-        <Toolbar
-          sx={{
-            pr: '24px',
-          }}
-        >
+      <AppTopBar position='absolute' open={open}>
+        <Toolbar sx={{ pr: '24px' }}>
           <IconButton
             edge='start'
             color='inherit'
@@ -58,7 +48,7 @@ export default function MainLayout(props: MainLayoutProps) {
             Maxime Clement IoT
           </Typography>
         </Toolbar>
-      </AppBar>
+      </AppTopBar>
       <AppDrawer variant='permanent' open={open}>
         <Toolbar
           sx={{
@@ -73,26 +63,7 @@ export default function MainLayout(props: MainLayoutProps) {
           </IconButton>
         </Toolbar>
         <Divider />
-        <List>
-          <ListItem button>
-            <ListItemIcon>
-              <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary='Dashboard' />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <ShoppingCartIcon />
-            </ListItemIcon>
-            <ListItemText primary='Orders' />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <PeopleIcon />
-            </ListItemIcon>
-            <ListItemText primary='Customers' />
-          </ListItem>
-        </List>
+        <AppDrawerItems />
       </AppDrawer>
       <Box
         component='main'
@@ -108,6 +79,7 @@ export default function MainLayout(props: MainLayoutProps) {
       >
         <Toolbar />
         {props.children}
+        <AppBottomBar />
       </Box>
     </Box>
   );
