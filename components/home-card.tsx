@@ -9,13 +9,6 @@ import {
 } from '@mui/material';
 import { Fragment } from 'react';
 
-const HomeCardStyled = styled(Card)<CardProps>(({ theme }) => ({
-  borderWidth: '0.15rem',
-  borderStyle: 'solid',
-  borderColor: theme.palette.primary.main,
-  margin: '2rem',
-}));
-
 function TheCardContent() {
   return (
     <Fragment>
@@ -42,8 +35,16 @@ function TheCardContent() {
   );
 }
 
+const HomeCardStyle = {
+  borderWidth: '0.15rem',
+  borderStyle: 'solid',
+  width: '50vw',
+  borderColor: 'primary.main',
+  margin: '2rem',
+};
+
 function HomeCard() {
-  return <HomeCardStyled>{TheCardContent()}</HomeCardStyled>;
+  return <Card sx={HomeCardStyle}>{TheCardContent()}</Card>;
 }
 
 export default HomeCard;

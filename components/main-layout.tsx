@@ -49,7 +49,7 @@ export default function MainLayout(props: MainLayoutProps) {
           </Typography>
         </Toolbar>
       </AppTopBar>
-      <AppDrawer variant='permanent' open={open}>
+      <AppDrawer open={open}>
         <Toolbar
           sx={{
             display: 'flex',
@@ -62,7 +62,6 @@ export default function MainLayout(props: MainLayoutProps) {
             <ChevronLeftIcon />
           </IconButton>
         </Toolbar>
-        <Divider />
         <AppDrawerItems />
       </AppDrawer>
       <Box

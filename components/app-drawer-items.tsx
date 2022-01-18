@@ -66,7 +66,10 @@ export default function AppDrawerItems() {
   return (
     <List>
       {drawerData.map((d) => (
-        <AppDrawerItem data={{ name: d.name, route: d.route, icon: d.icon }} />
+        <AppDrawerItem
+          data={{ name: d.name, route: d.route, icon: d.icon }}
+          key={d.name}
+        />
       ))}
     </List>
   );
