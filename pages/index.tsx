@@ -7,54 +7,61 @@ import { Fragment } from 'react';
 
 const MyImage = (props: any) => {
   const { children } = props;
-  return (
-    <Fragment>
-      <Box
-        sx={{
-          position: 'absolute',
-          opacity: '0.15',
-          width: '100%',
-          height: '100%',
-        }}
-      >
-        <Image
-          src={'/images/pages-background/coding.jpg'}
-          alt='coding'
-          layout='fill'
-          objectFit='cover'
-          quality={10}
-        />
-      </Box>
-      <Box
-        sx={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-        }}
-      >
-        {children}
-      </Box>
-    </Fragment>
-  );
+  return <Fragment></Fragment>;
 };
 
 const HomePage: NextPage = () => {
   return (
     <Container
       sx={{
-        height: '100vh%',
-        flexDirection: 'column',
-        overflow: 'hidden',
-        scrollbarWidth: '5px',
-        scrollbarColor: 'red',
+        width: '100%',
+        height: '100%',
       }}
     >
-      {/* <MyImage> */}
+      {/* <MyImage></MyImage> */}
+
+      <div
+        style={{
+          position: 'fixed',
+          height: '100vh',
+          width: '100vw',
+          overflow: 'hidden',
+          bottom: '0',
+          left: '0',
+          zIndex: '-1',
+          opacity: '0.2',
+        }}
+      >
+        <Image
+          alt='travel'
+          src={'/images/pages-background/coding.jpg'}
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
+      </div>
+
+      <HomeCard />
+      <Box sx={{ width: '200px', height: '200px', position: 'relative' }}>
+        <Image
+          alt='Mountains'
+          src={'/images/pages-background/coding.jpg'}
+          // src='/mountains.jpg'
+          layout='fill'
+          objectFit='contain'
+        />
+      </Box>
+
       <HomeCard />
       <HomeCard />
       <HomeCard />
       <HomeCard />
-      {/* </MyImage> */}
+      <HomeCard />
+      <HomeCard />
+      <HomeCard />
+      <HomeCard />
+      <HomeCard />
+      <HomeCard />
     </Container>
   );
 };

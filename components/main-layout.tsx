@@ -23,12 +23,13 @@ export default function MainLayout(props: MainLayoutProps) {
       <Container
         component='main'
         sx={{
+          position: 'relative',
           mt: '3rem',
           pt: '2rem',
         }}
       >
         {props.children}
-        {/* <AppBottomBar /> */}
+        <AppBottomBar />
       </Container>
     </Container>
   );
