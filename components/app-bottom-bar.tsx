@@ -2,6 +2,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Box, Divider, SxProps, useTheme } from '@mui/material';
+import Link from 'next/link';
 
 export default function AppBottomBar() {
   const theme = useTheme();
@@ -19,19 +20,36 @@ export default function AppBottomBar() {
   };
 
   const iconBoxStyle: SxProps = {
-    mt: '1rem',
+    my: '1rem',
     display: 'flex',
     width: '90%',
     justifyContent: 'flex-end',
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+    },
+  };
+
+  const iconStyle: SxProps = {
+    fontSize: '3rem',
+    mr: '2rem',
+    color: theme.palette.text.primary,
   };
 
   return (
     <Box sx={AppBottomBarStyle}>
       <Divider sx={dividerStyle} />
       <Box sx={iconBoxStyle}>
-        <LinkedInIcon sx={{ mr: '2rem' }} />
-        <GitHubIcon sx={{ mr: '2rem' }} />
-        <EmailIcon />
+        <a href='https://www.linkedin.com/in/maximeclement-iot/'>
+          <LinkedInIcon sx={iconStyle} />
+        </a>
+        <a href='https://github.com/pseudoincorrect'>
+          <GitHubIcon sx={iconStyle} />
+        </a>
+        <Link href='/contact'>
+          <a>
+            <EmailIcon sx={{ ...iconStyle, mr: '0' }} />
+          </a>
+        </Link>
       </Box>
     </Box>
   );

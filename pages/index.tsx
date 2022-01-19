@@ -1,57 +1,24 @@
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 import Image from 'next/image';
-import HomeCard from '../components/home-card';
-
-import type { NextPage } from 'next';
 import { Fragment } from 'react';
 
-const MyImage = (props: any) => {
-  const { children } = props;
-  return <Fragment></Fragment>;
-};
+import HomeCard from '../components/home-card';
+import PageContainer from '../components/page-container';
+
+import type { NextPage } from 'next';
 
 const HomePage: NextPage = () => {
   return (
-    <Container
-      sx={{
-        width: '100%',
-        height: '100%',
-      }}
-    >
-      {/* <MyImage></MyImage> */}
-
-      <div
-        style={{
-          position: 'fixed',
-          height: '100vh',
-          width: '100vw',
-          overflow: 'hidden',
-          bottom: '0',
-          left: '0',
-          zIndex: '-1',
-          opacity: '0.2',
-        }}
-      >
-        <Image
-          alt='travel'
-          src={'/images/pages-background/coding.jpg'}
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </div>
-
+    <PageContainer imagePath='/images/pages-background/coding.jpg'>
       <HomeCard />
       <Box sx={{ width: '200px', height: '200px', position: 'relative' }}>
         <Image
-          alt='Mountains'
+          alt='coding'
           src={'/images/pages-background/coding.jpg'}
-          // src='/mountains.jpg'
           layout='fill'
           objectFit='contain'
         />
       </Box>
-
       <HomeCard />
       <HomeCard />
       <HomeCard />
@@ -60,9 +27,7 @@ const HomePage: NextPage = () => {
       <HomeCard />
       <HomeCard />
       <HomeCard />
-      <HomeCard />
-      <HomeCard />
-    </Container>
+    </PageContainer>
   );
 };
 

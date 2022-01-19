@@ -18,7 +18,7 @@ export default function MainLayout(props: MainLayoutProps) {
 
   return (
     <Container sx={{ display: 'flex' }}>
-      <AppTopBar drawerToggle={toggleDrawer} title={'IoT Engineer'} />
+      <AppTopBar drawerToggle={toggleDrawer} />
       <AppDrawer open={open} drawerToggle={toggleDrawer}></AppDrawer>
       <Container
         component='main'

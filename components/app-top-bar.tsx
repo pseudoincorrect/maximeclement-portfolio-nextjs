@@ -6,13 +6,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 interface AppTopBarProps extends AppBarProps {
-  title: string;
   drawerToggle: () => void;
 }
 
 function AppTopBar(props: AppTopBarProps) {
   const theme = useTheme();
-  const { drawerToggle, title } = props;
+  const { drawerToggle } = props;
 
   const style: SxProps = {
     zIndex: theme.zIndex.drawer + 1,
@@ -20,6 +19,7 @@ function AppTopBar(props: AppTopBarProps) {
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       alignItems: 'flex-start',
+      height: '4rem',
     },
     boxShadow:
       '0 6px 12px 0 rgba(0, 0, 0, 0.3), 0 8px 20px 0 rgba(0, 0, 0, 0.29);',
@@ -47,7 +47,7 @@ function AppTopBar(props: AppTopBarProps) {
           noWrap
           sx={{ flexGrow: 1, padding: '1rem 0' }}
         >
-          {title}
+          IoT Engineer
         </Typography>
       </Toolbar>
     </AppBar>
