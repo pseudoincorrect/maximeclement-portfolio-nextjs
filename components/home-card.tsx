@@ -8,7 +8,7 @@ import {
   useTheme,
 } from '@mui/material';
 import { Fragment } from 'react';
-import { hexToRGBA } from '../src/helpers';
+import { hexToRGBA } from '../helpers/helpers';
 
 function TheCardContent() {
   return (
@@ -42,7 +42,8 @@ function HomeCard() {
   const HomeCardStyle: SxProps = {
     borderWidth: '0.15rem',
     borderStyle: 'solid',
-    backgroundColor: hexToRGBA(theme.palette.background.default, 0.1),
+    backgroundColor: 'black',
+    opacity: '1',
     borderColor: 'primary.main',
     margin: '2rem',
   };

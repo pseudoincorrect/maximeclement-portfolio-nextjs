@@ -5,9 +5,10 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Fragment } from 'react';
 import MainLayout from '../components/main-layout';
+import './style.css';
 
-import createEmotionCache from '../src/createEmotionCache';
-import theme from '../src/theme';
+import createEmotionCache from '../helpers/createEmotionCache';
+import theme from '../helpers/theme';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();

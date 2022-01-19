@@ -1,8 +1,8 @@
 import { red } from '@mui/material/colors';
-import { createTheme } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 // Create a theme instance.
-const theme = createTheme({
+let theme = createTheme({
   typography: {
     fontFamily: `"Montserrat", "Arial", sans-serif`,
     fontSize: 18,
@@ -31,5 +31,7 @@ const theme = createTheme({
     },
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 export default theme;

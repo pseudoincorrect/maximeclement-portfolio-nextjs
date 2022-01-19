@@ -1,60 +1,63 @@
+import { Box } from '@mui/material';
 import Drawer, { DrawerProps } from '@mui/material/Drawer';
-import { SxProps, useTheme } from '@mui/material/styles';
+import Toolbar from '@mui/material/Toolbar';
+import { Fragment, useState } from 'react';
 
-const ENTERING = 'entering';
-const LEAVING = 'leaving';
+import AppDrawerItems from './app-drawer-items';
+
+const drawerContent = (
+  <div>
+    <Toolbar
+      sx={{
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        px: [1],
+      }}
+    />
+    <AppDrawerItems />
+  </div>
+);
 
 interface AppDrawerProps extends DrawerProps {
   open: boolean;
-  sideWidth: number;
+  drawerToggle: () => void;
 }
 
 function AppDrawer(props: AppDrawerProps) {
-  const theme = useTheme();
-  const { children, open, sideWidth } = props;
-
-  function openCloseTransition(entering: string) {
-    return theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration:
-        entering == ENTERING
-          ? theme.transitions.duration.enteringScreen
-          : theme.transitions.duration.leavingScreen,
-    });
-  }
-
-  const styleCommon: SxProps = {
-    position: 'relative',
-    whiteSpace: 'nowrap',
-    boxSizing: 'border-box',
-    overflowX: 'hidden',
-    boxShadow:
-      '0 6px 20px 0 rgba(0, 0, 0, 0.3), 0 8px 30px 0 rgba(0, 0, 0, 0.29);',
-  };
-
-  const styleOpen: SxProps = {
-    '& .MuiDrawer-paper': {
-      ...styleCommon,
-      width: sideWidth,
-      transition: openCloseTransition(ENTERING),
-    },
-  };
-
-  const styleClosed: SxProps = {
-    '& .MuiDrawer-paper': {
-      ...styleCommon,
-      width: theme.spacing(7),
-      transition: openCloseTransition(LEAVING),
-      [theme.breakpoints.up('sm')]: {
-        width: theme.spacing(9),
-      },
-    },
-  };
+  const { open, drawerToggle } = props;
+  const drawerWidth = '13rem';
 
   return (
-    <Drawer sx={open ? styleOpen : styleClosed} variant='permanent' open={open}>
-      {children}
-    </Drawer>
+    <Box
+      component='nav'
+      sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+      aria-label='mailbox folders'
+    >
+      <Drawer
+        variant='temporary'
+        open={open}
+        onClose={drawerToggle}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
+        sx={{
+          display: { xs: 'block', sm: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+        }}
+      >
+        {drawerContent}
+      </Drawer>
+      <Drawer
+        variant='permanent'
+        sx={{
+          display: { xs: 'none', sm: 'block' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+        }}
+        open
+      >
+        {drawerContent}
+      </Drawer>
+    </Box>
   );
 }
 

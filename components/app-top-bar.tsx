@@ -1,43 +1,57 @@
+import MenuIcon from '@mui/icons-material/Menu';
 import AppBar, { AppBarProps } from '@mui/material/AppBar';
+import IconButton from '@mui/material/IconButton';
 import { SxProps, useTheme } from '@mui/material/styles';
-
-const ENTERING = 'entering';
-const LEAVING = 'leaving';
-
-function appBarTransition(theme: any, entering: string) {
-  return theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
-    duration:
-      entering == ENTERING
-        ? theme.transitions.duration.enteringScreen
-        : theme.transitions.duration.leavingScreen,
-  });
-}
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 
 interface AppTopBarProps extends AppBarProps {
-  open: boolean;
-  sideWidth: number;
+  title: string;
+  drawerToggle: () => void;
 }
 
 function AppTopBar(props: AppTopBarProps) {
   const theme = useTheme();
-  const { children, open, sideWidth } = props;
+  const { drawerToggle, title } = props;
 
-  const styleClosed: SxProps = {
+  const style: SxProps = {
     zIndex: theme.zIndex.drawer + 1,
+    height: '5rem',
+    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      alignItems: 'flex-start',
+    },
     boxShadow:
       '0 6px 12px 0 rgba(0, 0, 0, 0.3), 0 8px 20px 0 rgba(0, 0, 0, 0.29);',
-    transition: appBarTransition(theme, LEAVING),
   };
 
-  const styleOpen: SxProps = {
-    ...styleClosed,
-    marginLeft: sideWidth,
-    width: `calc(100% - ${sideWidth}px)`,
-    transition: appBarTransition(theme, ENTERING),
-  };
-
-  return <AppBar sx={open ? styleOpen : styleClosed}>{children}</AppBar>;
+  return (
+    <AppBar position='fixed' sx={style}>
+      <Toolbar sx={{ pr: '24px' }}>
+        <IconButton
+          edge='start'
+          color='inherit'
+          aria-label='open drawer'
+          onClick={drawerToggle}
+          sx={{
+            marginRight: '36px',
+            display: { xs: 'block', sm: 'none' },
+          }}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Typography
+          component='h1'
+          variant='h4'
+          color='inherit'
+          noWrap
+          sx={{ flexGrow: 1, padding: '1rem 0' }}
+        >
+          {title}
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  );
 }
 
 export default AppTopBar;
