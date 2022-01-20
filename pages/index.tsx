@@ -13,34 +13,34 @@ import PageContainer from '../components/page-container';
 
 import type { NextPage } from 'next';
 
+const StyledHomeTitleCard = styled(Card)(({ theme }) => ({
+  padding: '1rem',
+  width: '80%',
+  maxWidth: '36rem',
+  [theme.breakpoints.down('sm')]: {
+    width: '95%',
+  },
+  borderWidth: '0.15rem',
+  borderStyle: 'solid',
+  borderColor: theme.palette.primary.main,
+  backgroundColor: 'transparent',
+  backdropFilter: 'blur(4px)',
+  opacity: '1',
+  margin: '0',
+  textAlign: 'center',
+}));
+
 function HomeTitleCard() {
   const theme = useTheme();
-
-  const style: SxProps = {
-    py: '1rem',
-    width: '60%',
-    [theme.breakpoints.down('sm')]: {
-      width: '95%',
-    },
-    borderWidth: '0.15rem',
-    borderStyle: 'solid',
-    borderColor: theme.palette.primary.main,
-    backgroundColor: 'transparent',
-    backdropFilter: 'blur(4px)',
-    opacity: '1',
-    margin: '0',
-    textAlign: 'center',
-  };
-
   return (
-    <Card sx={style}>
+    <StyledHomeTitleCard>
       <Typography variant='h4'>
         Need <b style={{ color: theme.palette.secondary.main }}> IoT </b> in
         your Projects ?
       </Typography>
       <br />
       <Typography variant='h4'>I can help with that </Typography>
-    </Card>
+    </StyledHomeTitleCard>
   );
 }
 
@@ -53,9 +53,13 @@ const StyledImageDiv = styled('div')(({ theme }) => ({
   width: '23rem',
   height: '23rem',
   overflow: 'hidden',
+  [theme.breakpoints.down('md')]: {
+    width: '19rem',
+    height: '19rem',
+  },
   [theme.breakpoints.down('sm')]: {
-    width: '15rem',
-    height: '15rem',
+    width: '13rem',
+    height: '13rem',
   },
 }));
 
