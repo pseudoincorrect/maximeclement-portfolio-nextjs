@@ -1,21 +1,37 @@
-import { Box, Container, ContainerProps } from '@mui/material';
+import { Box, BoxProps } from '@mui/material';
 import Image from 'next/image';
 
-interface PageContainerProps extends ContainerProps {
+interface PageBoxProps extends BoxProps {
   imagePath: string;
 }
 
-export default function PageContainer(props: PageContainerProps) {
+export default function PageContainer(props: PageBoxProps) {
   const { children, imagePath } = props;
 
   return (
-    <Container
-      sx={{
-        width: '100%',
-        height: '100%',
-      }}
-    >
-      <div
+    <Box>
+      <Box
+        style={{
+          position: 'fixed',
+          height: '100vh',
+          width: '100vw',
+          overflow: 'hidden',
+          bottom: '0',
+          left: '0',
+          opacity: '0.3',
+          zIndex: '-1',
+        }}
+      >
+        <Image
+          alt='page background'
+          loading='eager'
+          src={imagePath}
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
+      </Box>
+      <Box
         style={{
           position: 'fixed',
           height: '100vh',
@@ -24,18 +40,11 @@ export default function PageContainer(props: PageContainerProps) {
           bottom: '0',
           left: '0',
           zIndex: '-1',
-          opacity: '0.2',
+          opacity: '0.6',
+          backgroundColor: 'black',
         }}
-      >
-        <Image
-          alt='page background'
-          src={imagePath}
-          layout='fill'
-          objectFit='cover'
-          quality={100}
-        />
-      </div>
+      />
       {children}
-    </Container>
+    </Box>
   );
 }

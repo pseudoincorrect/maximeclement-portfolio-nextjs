@@ -1,10 +1,22 @@
+import { ThemeOptions } from '@mui/material';
 import { red } from '@mui/material/colors';
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
-// Create a theme instance.
-let theme = createTheme({
+// We need to Augment (extends the 'Theme' interface to access parameter)
+// This has to be mad 'globally' since many module will use 'Theme' interface
+declare module '@mui/material/styles' {
+  interface ThemeExtension {
+    custom: {
+      background1: string;
+    };
+  }
+  interface Theme extends ThemeExtension {}
+  interface ThemeOptions extends ThemeExtension {}
+}
+
+let themeProps: ThemeOptions = {
   typography: {
-    fontFamily: `"Montserrat", "Arial", sans-serif`,
+    fontFamily: `"fira-sans", "Arial", sans-serif`,
     fontSize: 18,
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -30,8 +42,12 @@ let theme = createTheme({
       main: red.A400,
     },
   },
-});
+  custom: {
+    background1: 'rgba(0,0,0,0.5)',
+  },
+};
 
+let theme = createTheme(themeProps);
 theme = responsiveFontSizes(theme);
 
 export default theme;

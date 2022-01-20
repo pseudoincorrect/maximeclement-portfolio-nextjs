@@ -1,13 +1,14 @@
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Box, Divider, SxProps, useTheme } from '@mui/material';
+import { Box, Divider, styled, SxProps, useTheme } from '@mui/material';
+import { SystemCssProperties } from '@mui/system';
 import Link from 'next/link';
 
 export default function AppBottomBar() {
   const theme = useTheme();
 
-  const AppBottomBarStyle: SxProps = {
+  const AppBottomBarStyle: any = {
     mt: '3rem',
     mb: '1rem',
     display: 'flex',
@@ -19,15 +20,15 @@ export default function AppBottomBar() {
     width: '90%',
   };
 
-  const iconBoxStyle: SxProps = {
-    my: '1rem',
+  const StyledIconBoxDiv = styled('div')(({ theme }) => ({
+    margin: '1rem 0',
     display: 'flex',
     width: '90%',
     justifyContent: 'flex-end',
     [theme.breakpoints.down('sm')]: {
       justifyContent: 'center',
     },
-  };
+  }));
 
   const iconStyle: SxProps = {
     fontSize: '3rem',
@@ -36,9 +37,9 @@ export default function AppBottomBar() {
   };
 
   return (
-    <Box sx={AppBottomBarStyle}>
+    <div style={AppBottomBarStyle}>
       <Divider sx={dividerStyle} />
-      <Box sx={iconBoxStyle}>
+      <StyledIconBoxDiv>
         <a href='https://www.linkedin.com/in/maximeclement-iot/'>
           <LinkedInIcon sx={iconStyle} />
         </a>
@@ -50,7 +51,7 @@ export default function AppBottomBar() {
             <EmailIcon sx={{ ...iconStyle, mr: '0' }} />
           </a>
         </Link>
-      </Box>
-    </Box>
+      </StyledIconBoxDiv>
+    </div>
   );
 }

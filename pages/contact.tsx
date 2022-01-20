@@ -1,8 +1,14 @@
+import { Box } from '@mui/material';
 import type { NextPage } from 'next';
+import PageContainer from '../components/page-container';
 
 const ContactPage: NextPage = () => {
   return (
-  <h1>Contact Page</h1>
+    <PageContainer imagePath='/images/contact/background.jpg'>
+      <Box>
+        <h1>Contact Page</h1>
+      </Box>
+    </PageContainer>
   );
 };
 

@@ -15,6 +15,7 @@
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
+    "@fontsource/fira-sans": "^4.5.0",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "next": "latest",

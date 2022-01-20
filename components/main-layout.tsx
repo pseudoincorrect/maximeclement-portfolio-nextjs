@@ -1,4 +1,3 @@
-import { Container, CssBaseline, Toolbar } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useState } from 'react';
 
@@ -17,20 +16,31 @@ export default function MainLayout(props: MainLayoutProps) {
   };
 
   return (
-    <Container sx={{ display: 'flex' }}>
+    <Box
+      style={{
+        display: 'flex',
+        margin: '0',
+        padding: '0',
+      }}
+    >
       <AppTopBar drawerToggle={toggleDrawer} />
       <AppDrawer open={open} drawerToggle={toggleDrawer}></AppDrawer>
-      <Container
+      <Box
         component='main'
         sx={{
           position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          margin: '0',
+          padding: '0',
           mt: '3rem',
           pt: '2rem',
+          width: '100%',
         }}
       >
         {props.children}
         <AppBottomBar />
-      </Container>
-    </Container>
+      </Box>
+    </Box>
   );
 }

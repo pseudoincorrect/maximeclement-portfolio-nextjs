@@ -45,7 +45,7 @@ function HomeCard() {
     backgroundColor: 'black',
     opacity: '1',
     borderColor: 'primary.main',
-    margin: '2rem',
+    margin: '0',
   };
   return <Card sx={HomeCardStyle}>{TheCardContent()}</Card>;
 }

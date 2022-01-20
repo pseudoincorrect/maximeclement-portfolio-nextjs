@@ -1,45 +1,82 @@
 import MenuIcon from '@mui/icons-material/Menu';
+import { Box, styled } from '@mui/material';
 import AppBar, { AppBarProps } from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
 import { SxProps, useTheme } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Image from 'next/image';
 
 interface AppTopBarProps extends AppBarProps {
   drawerToggle: () => void;
 }
 
+const StyledIconBox = styled(Box)(({ theme }) => ({
+  marginRight: '2rem',
+  position: 'relative',
+  width: '4rem',
+  height: '4rem',
+  overflow: 'hidden',
+  [theme.breakpoints.down('sm')]: {
+    marginRight: '2rem',
+    display: 'none',
+    width: '3rem',
+    height: '3rem',
+  },
+}));
+
+function TitleIcon() {
+  return (
+    <StyledIconBox>
+      <Image
+        alt='iot cloud'
+        priority={true}
+        src='/favicon.ico'
+        layout='fill'
+        objectFit='cover'
+        quality={100}
+      />
+    </StyledIconBox>
+  );
+}
+
+const StyledAppBar = styled(AppBar)(({ theme }) => ({
+  zIndex: theme.zIndex.drawer + 1,
+  overflow: 'hidden',
+  height: '5rem',
+  alignItems: 'center',
+  paddingLeft: '13rem',
+  [theme.breakpoints.down('sm')]: {
+    paddingLeft: '1rem',
+    height: '4rem',
+  },
+  boxShadow:
+    '0 6px 12px 0 rgba(0, 0, 0, 0.3), 0 8px 20px 0 rgba(0, 0, 0, 0.29);',
+}));
+
 function AppTopBar(props: AppTopBarProps) {
   const theme = useTheme();
   const { drawerToggle } = props;
 
-  const style: SxProps = {
-    zIndex: theme.zIndex.drawer + 1,
-    height: '5rem',
-    alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      alignItems: 'flex-start',
-      height: '4rem',
-    },
-    boxShadow:
-      '0 6px 12px 0 rgba(0, 0, 0, 0.3), 0 8px 20px 0 rgba(0, 0, 0, 0.29);',
-  };
-
   return (
-    <AppBar position='fixed' sx={style}>
-      <Toolbar sx={{ pr: '24px' }}>
+    <StyledAppBar position='fixed'>
+      <Toolbar>
         <IconButton
           edge='start'
           color='inherit'
           aria-label='open drawer'
           onClick={drawerToggle}
           sx={{
-            marginRight: '36px',
+            position: 'fixed',
+            left: '2rem',
+            marginTop: '10px',
+            marginRight: '2rem',
             display: { xs: 'block', sm: 'none' },
           }}
         >
           <MenuIcon />
         </IconButton>
+        <TitleIcon />
         <Typography
           component='h1'
           variant='h4'
@@ -50,7 +87,7 @@ function AppTopBar(props: AppTopBarProps) {
           IoT Engineer
         </Typography>
       </Toolbar>
-    </AppBar>
+    </StyledAppBar>
   );
 }
 

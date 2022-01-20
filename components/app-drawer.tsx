@@ -6,7 +6,7 @@ import { Fragment, useState } from 'react';
 import AppDrawerItems from './app-drawer-items';
 
 const drawerContent = (
-  <div>
+  <Box>
     <Toolbar
       sx={{
         alignItems: 'center',
@@ -15,7 +15,7 @@ const drawerContent = (
       }}
     />
     <AppDrawerItems />
-  </div>
+  </Box>
 );
 
 interface AppDrawerProps extends DrawerProps {
