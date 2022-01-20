@@ -46,14 +46,18 @@ const drawerData: AppDrawerItemData[] = [
   },
 ];
 
-function AppDrawerItem(props: { data: AppDrawerItemData }) {
-  const data = props.data;
+function AppDrawerItem(props: {
+  data: AppDrawerItemData;
+  clicked: () => void;
+}) {
+  const { data, clicked } = props;
   const router = useRouter();
   return (
     <ListItem
       button
       onClick={(e) => {
         e.preventDefault();
+        clicked();
         router.push(data.route);
       }}
       sx={{ margin: '2rem 0' }}
@@ -64,13 +68,13 @@ function AppDrawerItem(props: { data: AppDrawerItemData }) {
   );
 }
 
-export default function AppDrawerItems() {
-  const router = useRouter();
+export default function AppDrawerItems(props: { clicked: () => void }) {
   return (
     <List>
       {drawerData.map((d) => (
         <AppDrawerItem
           data={{ name: d.name, route: d.route, icon: d.icon }}
+          clicked={props.clicked}
           key={d.name}
         />
       ))}

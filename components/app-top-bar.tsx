@@ -46,6 +46,9 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   height: '5rem',
   alignItems: 'center',
   paddingLeft: '13rem',
+  backgroundColor: 'rgba(0,0,0,0.5)',
+  backdropFilter: 'blur(8px)',
+
   [theme.breakpoints.down('sm')]: {
     paddingLeft: '1rem',
     height: '4rem',
@@ -55,7 +58,6 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 }));
 
 function AppTopBar(props: AppTopBarProps) {
-  const theme = useTheme();
   const { drawerToggle } = props;
 
   return (

@@ -5,18 +5,22 @@ import { Fragment, useState } from 'react';
 
 import AppDrawerItems from './app-drawer-items';
 
-const drawerContent = (
-  <Box>
-    <Toolbar
-      sx={{
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        px: [1],
-      }}
-    />
-    <AppDrawerItems />
-  </Box>
-);
+// TODO : click close the drawer
+function DrawerContent(props: { clicked: () => void }) {
+  const { clicked } = props;
+  return (
+    <Box>
+      <Toolbar
+        sx={{
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          px: [1],
+        }}
+      />
+      <AppDrawerItems clicked={clicked} />
+    </Box>
+  );
+}
 
 interface AppDrawerProps extends DrawerProps {
   open: boolean;
@@ -45,7 +49,7 @@ function AppDrawer(props: AppDrawerProps) {
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
       >
-        {drawerContent}
+        <DrawerContent clicked={drawerToggle} />
       </Drawer>
       <Drawer
         variant='permanent'
@@ -55,7 +59,7 @@ function AppDrawer(props: AppDrawerProps) {
         }}
         open
       >
-        {drawerContent}
+        <DrawerContent clicked={drawerToggle} />
       </Drawer>
     </Box>
   );
