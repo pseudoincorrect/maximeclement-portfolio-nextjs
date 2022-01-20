@@ -28,7 +28,7 @@ export default function PageContainer(props: PageBoxProps) {
           src={imagePath}
           layout='fill'
           objectFit='cover'
-          quality={100}
+          quality={80}
         />
       </Box>
       <Box

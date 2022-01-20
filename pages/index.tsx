@@ -81,7 +81,7 @@ function Presentation() {
           src='/images/home/max_pict.jpg'
           layout='fill'
           objectFit='cover'
-          quality={100}
+          quality={80}
         />
       </StyledImageDiv>
 
