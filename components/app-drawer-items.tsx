@@ -17,32 +17,32 @@ const drawerData: AppDrawerItemData[] = [
   {
     name: 'Home',
     route: '/',
-    icon: <HomeIcon />,
+    icon: <HomeIcon sx={{ fontSize: 50 }} />,
   },
   {
     name: 'Projects',
     route: '/projects',
-    icon: <CheckIcon />,
+    icon: <CheckIcon sx={{ fontSize: 50 }} />,
   },
   {
     name: 'Skills',
     route: '/skills',
-    icon: <ArchitectureIcon />,
+    icon: <ArchitectureIcon sx={{ fontSize: 50 }} />,
   },
   {
     name: 'Path',
     route: '/path',
-    icon: <AddRoadIcon />,
+    icon: <AddRoadIcon sx={{ fontSize: 50 }} />,
   },
   {
     name: 'Leisure',
     route: '/leisure',
-    icon: <SportsTennisIcon />,
+    icon: <SportsTennisIcon sx={{ fontSize: 50 }} />,
   },
   {
     name: 'Contact',
     route: '/contact',
-    icon: <ContactPageIcon />,
+    icon: <ContactPageIcon sx={{ fontSize: 50 }} />,
   },
 ];
 
@@ -52,6 +52,7 @@ function AppDrawerItem(props: {
 }) {
   const { data, clicked } = props;
   const router = useRouter();
+
   return (
     <ListItem
       button
@@ -63,7 +64,10 @@ function AppDrawerItem(props: {
       sx={{ margin: '2rem 0' }}
     >
       <ListItemIcon>{data.icon}</ListItemIcon>
-      <ListItemText primary={data.name} />
+      <ListItemText
+        primary={data.name}
+        primaryTypographyProps={{ fontSize: '20px', marginLeft: '1rem' }}
+      />
     </ListItem>
   );
 }

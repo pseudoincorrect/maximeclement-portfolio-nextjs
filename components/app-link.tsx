@@ -2,7 +2,7 @@ import { styled, Typography } from '@mui/material';
 import Link from 'next/link';
 
 const LinkA = styled('a')(({ theme }) => ({
-  textDecoration: 'none',
+  textDecoration: 'underline',
   color: theme.palette.primary.main,
   fontWeight: 'bold',
   cursor: 'pointer',
@@ -16,17 +16,17 @@ const LinkA = styled('a')(({ theme }) => ({
 interface AppLinkProps {
   href: string;
   content: string;
-  variant: any;
+  size: any;
 }
 
 export default function AppLink(props: AppLinkProps) {
-  const { variant, content, href } = props;
+  const { size, content, href } = props;
 
   return (
-    <Typography variant={variant} display='inline'>
+    <span>
       <Link href={href}>
-        <LinkA>{content}</LinkA>
+        <LinkA sx={{ fontSize: size }}>{content}</LinkA>
       </Link>
-    </Typography>
+    </span>
   );
 }
