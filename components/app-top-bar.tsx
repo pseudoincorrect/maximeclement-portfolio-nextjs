@@ -17,7 +17,7 @@ const StyledIconBox = styled(Box)(({ theme }) => ({
   width: '4rem',
   height: '4rem',
   overflow: 'hidden',
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     marginRight: '2rem',
     display: 'none',
     width: '3rem',
@@ -49,7 +49,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: 'rgba(0,0,0,0.5)',
   backdropFilter: 'blur(8px)',
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     paddingLeft: '1rem',
     height: '4rem',
   },
@@ -73,7 +73,7 @@ function AppTopBar(props: AppTopBarProps) {
             left: '2rem',
             marginTop: '10px',
             marginRight: '2rem',
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', sm: 'block', md: 'none' },
           }}
         >
           <MenuIcon />

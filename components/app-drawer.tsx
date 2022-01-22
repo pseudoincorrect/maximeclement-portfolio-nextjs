@@ -34,7 +34,7 @@ function AppDrawer(props: AppDrawerProps) {
   return (
     <Box
       component='nav'
-      sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+      sx={{ width: { md: drawerWidth }, flexShrink: { sm: 1, md: 0 } }}
       aria-label='mailbox folders'
     >
       <Drawer
@@ -45,7 +45,7 @@ function AppDrawer(props: AppDrawerProps) {
           keepMounted: true, // Better open performance on mobile.
         }}
         sx={{
-          display: { xs: 'block', sm: 'none' },
+          display: { xs: 'block', sm: 'block', md: 'none' },
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
       >
@@ -54,7 +54,7 @@ function AppDrawer(props: AppDrawerProps) {
       <Drawer
         variant='permanent'
         sx={{
-          display: { xs: 'none', sm: 'block' },
+          display: { xs: 'none', sm: 'none', md: 'block' },
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
         open

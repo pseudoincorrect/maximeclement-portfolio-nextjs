@@ -25,7 +25,7 @@ export default function AppBottomBar() {
     display: 'flex',
     width: '90%',
     justifyContent: 'flex-end',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       justifyContent: 'center',
     },
   }));
