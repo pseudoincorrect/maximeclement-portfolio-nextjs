@@ -17,10 +17,10 @@ declare module '@mui/material/styles' {
 let themeProps: ThemeOptions = {
   typography: {
     fontFamily: `"fira-sans", "Arial", sans-serif`,
-    fontSize: 14,
-    fontWeightLight: 150,
-    fontWeightRegular: 250,
-    fontWeightMedium: 300,
+    fontSize: 13,
+    fontWeightLight: 200,
+    fontWeightRegular: 300,
+    fontWeightMedium: 400,
   },
   palette: {
     mode: 'dark',

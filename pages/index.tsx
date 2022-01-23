@@ -35,12 +35,12 @@ const HomePictureDiv = styled('div')(({ theme }) => ({
   display: 'flex',
   borderRadius: '50%',
   alignSelf: 'center',
-  width: '20rem',
-  height: '20rem',
+  width: '18rem',
+  height: '18rem',
   overflow: 'hidden',
   [theme.breakpoints.down('md')]: {
-    width: '19rem',
-    height: '19rem',
+    width: '18rem',
+    height: '18rem',
   },
   [theme.breakpoints.down('xs')]: {
     width: '13rem',
@@ -66,6 +66,7 @@ const ImageDiagramDiv = styled('div')({
   width: '20rem',
   height: '13rem',
   overflow: 'hidden',
+  marginBottom: '1rem',
 });
 
 const PresentationBox = styled(Box)(({ theme }) => ({
@@ -103,15 +104,12 @@ const homeCardBase = (theme: any): any => ({
   },
 });
 
-const IotCard = styled(Card)(({ theme }) => ({
+const HomeCardStyle1 = styled(Card)(({ theme }) => ({
   ...homeCardBase(theme),
 }));
 
-const SkillsCard = styled(Card)(({ theme }) => ({
+const HomeCardStyle2 = styled(Card)(({ theme }) => ({
   ...homeCardBase(theme),
-  [theme.breakpoints.down('md')]: {
-    width: '95%',
-  },
   borderColor: theme.palette.primary.main,
 }));
 
@@ -163,7 +161,7 @@ function Presentation() {
 function IotDescription() {
   const theme = useTheme();
   return (
-    <IotCard>
+    <HomeCardStyle1>
       <Typography align='justify'>
         You may have noticed the huge title up there with this catchy acronym:{' '}
         <AppLink size='20px' href='/projects' content='IoT' />.
@@ -222,14 +220,14 @@ function IotDescription() {
           </ImageDeviceDiv>
         </Grid>
       </Grid>
-    </IotCard>
+    </HomeCardStyle1>
   );
 }
 
-function SkillsDescription() {
+function ToolsDescription() {
   const theme = useTheme();
   return (
-    <SkillsCard>
+    <HomeCardStyle2>
       <Typography align='justify'>
         It happens that I have been working in this domain mixing
         <Bc> web technologies</Bc>,<Bc> software</Bc> and <Bc>hardware</Bc>{' '}
@@ -290,10 +288,17 @@ function SkillsDescription() {
           </div>
         </Grid>
       </Grid>
+    </HomeCardStyle2>
+  );
+}
 
+function SkillsDescription() {
+  const theme = useTheme();
+  return (
+    <HomeCardStyle1>
       <p style={{ textAlign: 'justify' }}>
         Naturally, a large variety of tools and programming languages are
-        involved in this process. I try, as much as I can, to{' '}
+        involved in this process. I try as much as I can to{' '}
         <Bc>pick the right tool for the current job</Bc>.
       </p>
 
@@ -357,13 +362,13 @@ function SkillsDescription() {
         </u>{' '}
         page gives a deeper overview of the kind of work I usualy do.
       </p>
-    </SkillsCard>
+    </HomeCardStyle1>
   );
 }
 
 function EndNoteCard() {
   return (
-    <IotCard>
+    <HomeCardStyle2>
       <p>
         IoT, Cloud Applications and Embedded Systems are a true passion of mine.
         <br />
@@ -373,9 +378,9 @@ function EndNoteCard() {
             <AppLink size='16px' href='/contact' content='Contact' />
           </Bc>
         </u>{' '}
-        me to have a chat.
+        me to discuss it.
       </p>
-    </IotCard>
+    </HomeCardStyle2>
   );
 }
 
@@ -386,6 +391,7 @@ const HomePage: NextPage = () => {
         <HomeTitle />
         <Presentation />
         <IotDescription />
+        <ToolsDescription />
         <SkillsDescription />
         <EndNoteCard />
       </HomePageBox>

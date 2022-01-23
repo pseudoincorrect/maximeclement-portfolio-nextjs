@@ -30,7 +30,7 @@ function TitleIcon() {
     <StyledIconBox>
       <Image
         alt='iot cloud'
-        priority={true}
+        priority={false}
         src='/favicon.ico'
         layout='fill'
         objectFit='cover'
@@ -74,8 +74,7 @@ function AppTopBar(props: AppTopBarProps) {
             marginTop: '10px',
             marginRight: '2rem',
             display: { xs: 'block', sm: 'block', md: 'none' },
-          }}
-        >
+          }}>
           <MenuIcon />
         </IconButton>
         <TitleIcon />
@@ -84,8 +83,7 @@ function AppTopBar(props: AppTopBarProps) {
           variant='h4'
           color='inherit'
           noWrap
-          sx={{ flexGrow: 1, padding: '1rem 0' }}
-        >
+          sx={{ flexGrow: 1, padding: '1rem 0' }}>
           IoT Engineer
         </Typography>
       </Toolbar>
