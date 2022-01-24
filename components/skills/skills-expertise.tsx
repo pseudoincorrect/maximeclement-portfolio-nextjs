@@ -1,7 +1,7 @@
 export default function SkillsExpertiseData() {
   return (
     <div>
-      Backend
+      <div className='title-lvl-1'>Backend</div>
       <ul>
         <li>Database SQL & NoSQL</li>
         <li>Serverless Cloud Architecture</li>
@@ -11,14 +11,14 @@ export default function SkillsExpertiseData() {
         <li>Infrastructure as Code </li>
         <li>Cybersecurity (IoT standards)</li>
       </ul>
-      Frontend
+      <div className='title-lvl-1'>Frontend</div>
       <ul>
         <li>Web and Mobile Applications</li>
         <li>(Near) Realtime Data Applications</li>
         <li>Dynamic websites</li>
         <li>Familiar with UX design patterns</li>
       </ul>
-      Hardware and Firmware
+      <div className='title-lvl-1'>Hardware and Firmware</div>
       <ul>
         <li>Microcontroller programming </li>
         <li>Wireless Protocols (Bluetooth, Wi-Fi, LoraWan, Thread, ...)</li>
@@ -27,7 +27,7 @@ export default function SkillsExpertiseData() {
         <li>Printed Circuit Board (PCB) Design</li>
         <li>Prototyping</li>
       </ul>
-      Project Management
+      <div className='title-lvl-1'>Project Management</div>
       <ul>
         <li>Managed multiple projects</li>
         <li>Budget analysis for each of them</li>

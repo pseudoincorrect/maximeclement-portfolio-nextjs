@@ -16,6 +16,25 @@ const SkillPageBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     padding: '0.1rem',
   },
+  '& li': {
+    margin: '0rem',
+  },
+
+  '& ul': {
+    margin: '0rem',
+  },
+
+  '& .title-lvl-1': {
+    color: theme.palette.warning.main,
+    fontWeight: 'bold',
+    fontSize: '20px',
+    marginTop: '0.7rem',
+  },
+
+  '& .title-lvl-2': {
+    fontSize: '18px',
+    marginTop: '0.5rem',
+  },
 }));
 
 const SkillColumnBox = styled(Box)(({ theme }) => ({
@@ -25,7 +44,7 @@ const SkillColumnBox = styled(Box)(({ theme }) => ({
   justifyItems: 'center',
   alignItems: 'center',
   padding: '0 1rem',
-  [theme.breakpoints.down('md')]: {
+  [theme.breakpoints.down('lg')]: {
     width: '100%',
   },
 }));
@@ -46,6 +65,24 @@ const SkillCard = styled(Card)(({ theme }) => ({
   opacity: '1',
 }));
 
+const SkillChartCard = styled(Card)(({ theme }) => ({
+  display: 'flex',
+  width: '100%',
+  height: '100%',
+  flexDirection: 'column',
+  maxWidth: '40rem',
+  maxHeight: '30rem',
+  margin: '1rem',
+  padding: '1rem',
+  borderRadius: '7px',
+  borderWidth: '0.15rem',
+  borderStyle: 'solid',
+  borderColor: theme.palette.primary.main,
+  backgroundColor: 'transparent',
+  backdropFilter: 'blur(4px)',
+  opacity: '1',
+}));
+
 const SkillTitleBox = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
@@ -55,19 +92,15 @@ const SkillTitleBox = styled(Box)(({ theme }) => ({
 
 function ContentChart({ title, children }: any) {
   return (
-    <SkillCard
-      sx={{
-        width: '100%',
-        height: '100%',
-        maxHeight: '40rem',
-        padding: '0',
-      }}>
-      <Typography variant='h3' align='center' sx={{ padding: '1rem' }}>
-        {title}
-      </Typography>
+    <SkillChartCard>
+      <Box sx={{ padding: '1rem' }}>
+        <Typography variant='h3' align='center'>
+          {title}
+        </Typography>
+      </Box>
       <Divider />
       {children}
-    </SkillCard>
+    </SkillChartCard>
   );
 }
 

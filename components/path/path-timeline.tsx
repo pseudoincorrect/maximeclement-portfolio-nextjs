@@ -65,6 +65,7 @@ function TimelineElement({
   const theme = useTheme();
   return (
     <VerticalTimelineElement
+      visible={true}
       style={{ padding: '0' }}
       className='vertical-timeline-element--work'
       contentStyle={{ background: colorBg, color: colorFg }}

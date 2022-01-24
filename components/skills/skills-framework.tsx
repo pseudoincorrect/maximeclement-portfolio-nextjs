@@ -1,7 +1,7 @@
 export default function SkillsFrameworkData() {
   return (
     <div>
-      Backend
+      <div className='title-lvl-1'>Backend</div>
       <ul>
         <li>AWS CDK Framework</li>
         <li>Express Rest API</li>
@@ -11,16 +11,16 @@ export default function SkillsFrameworkData() {
         <li>Docker based app</li>
         <li>AWS (Associate Developer Certified)</li>
       </ul>
-      Frontend
+      <div className='title-lvl-1'>Frontend</div>
       <ul>
         <li>React / Next.js</li>
         <li>Flutter (Mobile app)</li>
         <li>Angular (less often)</li>
       </ul>
-      Embedded Systems
+      <div className='title-lvl-1'>Embedded Systems</div>
       <ul>
         <li>
-          Microcontrollers
+          <div className='title-lvl-2'>Microcontrollers</div>
           <ul>
             <li>ST Microelectronics (regular MCU)</li>
             <li>Nordic Semiconductor (Bluetooth and Thread)</li>
@@ -30,46 +30,48 @@ export default function SkillsFrameworkData() {
           </ul>
         </li>
         <li>
-          Single Board Computers
+          <div className='title-lvl-2'>Single Board Computers</div>
           <ul>
             <li>Odroid</li>
             <li>Raspberry Pi</li>
           </ul>
         </li>
         <li>
-          FPGAs
+          <div className='title-lvl-2'>FPGAs</div>
           <ul>
             <li>Intel FPGA + Quartus / ModelSim / Nios</li>
           </ul>
         </li>
       </ul>
-      Electronic Design Automation Software (PCB design)
+      <div className='title-lvl-1'>
+        Electronic Design Automation Software (PCB design)
+      </div>
       <ul>
         <li>Altium Designer</li>
         <li>Eagle (Autodesk, Cadsoft)</li>
       </ul>
-      Testing
+      <div className='title-lvl-1'>Testing</div>
       <ul>
         <li>C Programming: Ceedling: Unity + Cmock + CException)</li>
         <li>Javascript: Jest, Jasmin, Karma</li>
       </ul>
-      Compiling and programming Tooling
+      <div className='title-lvl-1'>Compiling and programming Tooling</div>
       <ul>
         <li>VScode + GCC + Vendor Flashing/Debug tools</li>
         <li>Keil, Segger Embedded Studio, Code Composer Studio</li>
         <li>Many other proprietry IDE</li>
         <li>Ask me about it</li>
       </ul>
-      Versioning and Collaborative Software
+      <div className='title-lvl-1'>Versioning and Collaborative Software</div>
       <ul>
         <li>Git</li>
       </ul>
-      Computer-Aided Design Software (CAD)
+      <div className='title-lvl-1'>Computer-Aided Design Software (CAD)</div>
       <ul>
         <li>Fusion 360</li>
         <li>Solidworks</li>
       </ul>
-      Operating Systems
+      <div className='title-lvl-1'>Operating Systems</div>
       <ul>
         <li>Linux Distros, RPM and Debian</li>
         <li>OSX (my pick for web development)</li>
