@@ -21,10 +21,12 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-vertical-timeline-component": "^3.5.2",
     "recharts": "^2.1.8"
   },
   "devDependencies": {
     "@types/react": "latest",
+    "@types/react-vertical-timeline-component": "^3.3.1",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "typescript": "latest"

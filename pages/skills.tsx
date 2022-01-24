@@ -9,7 +9,7 @@ import SkillsRadarCoding from '../components/skills/skills-radar-coding';
 
 import type { NextPage } from 'next';
 
-const HomePageBox = styled(Box)(({ theme }) => ({
+const SkillPageBox = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexWrap: 'wrap',
   padding: '1rem',
@@ -104,7 +104,7 @@ function SkillListItems({ items, children }: any) {
 const SkillsPages: NextPage = () => {
   return (
     <PageContainer imagePath='/images/skills/background.jpg'>
-      <HomePageBox>
+      <SkillPageBox>
         <SkillTitleBox>
           <Typography variant='h2'>Skills</Typography>
         </SkillTitleBox>
@@ -127,7 +127,7 @@ const SkillsPages: NextPage = () => {
             <SkillsFrameworkData />
           </ContentList>
         </SkillColumnBox>
-      </HomePageBox>
+      </SkillPageBox>
     </PageContainer>
   );
 };
