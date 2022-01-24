@@ -1,13 +1,37 @@
-import { Box } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import type { NextPage } from 'next';
-import PageContainer from '../components/page-container';
+import PageContainer from '../components/layout/page-container';
+import ProjectCard from '../components/projects/project-card';
+import projectData from '../components/projects/projects-data.json';
+
+const ProjectPageBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: '100%',
+  padding: '1rem',
+  [theme.breakpoints.down('md')]: {
+    padding: '0.1rem',
+  },
+}));
 
 const ProjectsPage: NextPage = () => {
   return (
     <PageContainer imagePath='/images/projects/background.jpg'>
-      <Box>
-        <h1>Projects Page</h1>
-      </Box>
+      <ProjectPageBox>
+        {projectData.map((e) => (
+          <ProjectCard
+            title={e.title}
+            mainPictures={e.mainPictures}
+            summary={e.summary}
+            details={e.details}
+            detailsPictures={e.detailsPictures}
+            tags={e.tags}
+            location={e.location}
+            date={e.date}
+          />
+        ))}
+      </ProjectPageBox>
     </PageContainer>
   );
 };

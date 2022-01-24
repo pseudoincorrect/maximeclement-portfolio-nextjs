@@ -35,8 +35,7 @@ function AppDrawer(props: AppDrawerProps) {
     <Box
       component='nav'
       sx={{ width: { md: drawerWidth }, flexShrink: { sm: 1, md: 0 } }}
-      aria-label='mailbox folders'
-    >
+      aria-label='mailbox folders'>
       <Drawer
         variant='temporary'
         open={open}
@@ -47,8 +46,7 @@ function AppDrawer(props: AppDrawerProps) {
         sx={{
           display: { xs: 'block', sm: 'block', md: 'none' },
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-        }}
-      >
+        }}>
         <DrawerContent clicked={drawerToggle} />
       </Drawer>
       <Drawer
@@ -57,8 +55,7 @@ function AppDrawer(props: AppDrawerProps) {
           display: { xs: 'none', sm: 'none', md: 'block' },
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
-        open
-      >
+        open>
         <DrawerContent clicked={drawerToggle} />
       </Drawer>
     </Box>

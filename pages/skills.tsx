@@ -1,6 +1,6 @@
 import { Box, Card, Divider, styled, Typography } from '@mui/material';
 
-import PageContainer from '../components/page-container';
+import PageContainer from '../components/layout/page-container';
 import SkillsPieChart from '../components/skills/skills-pie-expertise';
 import SkillsFrameworkData from '../components/skills/skills-framework';
 import SkillsExpertiseData from '../components/skills/skills-expertise';
@@ -81,24 +81,6 @@ function ContentList({ title, children }: any) {
       {children}
     </SkillCard>
   );
-}
-
-function TmpItem({ title, count, children }: any) {
-  return (
-    <SkillCard>
-      <Typography variant='h3' align='center' sx={{ paddingBottom: '1rem' }}>
-        {title}
-      </Typography>
-      <Divider />
-      {Array.from({ length: count }, (_, i) => (
-        <p key={i}>{children}</p>
-      ))}
-    </SkillCard>
-  );
-}
-
-function SkillListItems({ items, children }: any) {
-  return { children };
 }
 
 const SkillsPages: NextPage = () => {

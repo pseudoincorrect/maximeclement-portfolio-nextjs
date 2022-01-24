@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import type { NextPage } from 'next';
-import PageContainer from '../components/page-container';
+import PageContainer from '../components/layout/page-container';
 
 const LeisuresPage: NextPage = () => {
   return (

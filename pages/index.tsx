@@ -1,8 +1,8 @@
 import { Box, Card, Grid, styled, Typography, useTheme } from '@mui/material';
 import Image from 'next/image';
 
-import AppLink from '../components/app-link';
-import PageContainer from '../components/page-container';
+import AppLink from '../components/misc/app-link';
+import PageContainer from '../components/layout/page-container';
 
 import type { NextPage } from 'next';
 

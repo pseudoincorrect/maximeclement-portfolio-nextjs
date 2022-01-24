@@ -7,7 +7,13 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 declare module '@mui/material/styles' {
   interface ThemeExtension {
     custom: {
-      background1: string;
+      backgrounds: {
+        b1: string;
+        b2: string;
+      };
+      foregrounds: {
+        f1: string;
+      };
     };
   }
   interface Theme extends ThemeExtension {}
@@ -16,8 +22,8 @@ declare module '@mui/material/styles' {
 
 let themeProps: ThemeOptions = {
   typography: {
-    fontFamily: `"fira-sans", "Arial", sans-serif`,
-    fontSize: 13,
+    fontFamily: `"Montserrat", "Arial", sans-serif`,
+    fontSize: 14,
     fontWeightLight: 200,
     fontWeightRegular: 300,
     fontWeightMedium: 400,
@@ -43,7 +49,14 @@ let themeProps: ThemeOptions = {
     },
   },
   custom: {
-    background1: 'rgba(0,0,0,0.5)',
+    backgrounds: {
+      b1: 'rgba(0,0,0,0.5)',
+      b2: 'rgba(0,255,00,0.1)',
+    },
+
+    foregrounds: {
+      f1: 'rgba(200,200,200,1)',
+    },
   },
 };
 

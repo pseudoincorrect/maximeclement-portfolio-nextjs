@@ -21,8 +21,7 @@ export default function MainLayout(props: MainLayoutProps) {
         display: 'flex',
         margin: '0',
         padding: '0',
-      }}
-    >
+      }}>
       <AppTopBar drawerToggle={toggleDrawer} />
       <AppDrawer open={open} drawerToggle={toggleDrawer}></AppDrawer>
       <Box
@@ -36,8 +35,7 @@ export default function MainLayout(props: MainLayoutProps) {
           mt: '3rem',
           pt: '2rem',
           width: '100%',
-        }}
-      >
+        }}>
         {props.children}
         <AppBottomBar />
       </Box>
