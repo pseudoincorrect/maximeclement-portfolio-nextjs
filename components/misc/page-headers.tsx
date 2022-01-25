@@ -27,7 +27,7 @@ export default function PageHeaders({
           key='viewport'
         />
         <meta http-equiv='cleartype' content='on' key='cleartype' />
-        <meta name='robots' content='index, follow' key='robots1' />
+        {/* <meta name='robots' content='index, follow' key='robots1' /> */}
         <meta name='robots' content='noodp' key='robots2' />
         {/* Title and Description */}
         <title>{title}</title>

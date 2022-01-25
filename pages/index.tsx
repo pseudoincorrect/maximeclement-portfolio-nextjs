@@ -401,7 +401,7 @@ function EndNoteCard() {
           <Bc>
             <AppLink size='16px' href='/contact' content='Contact' />
           </Bc>
-        </u>
+        </u>{' '}
         me to discuss it.
       </p>
     </HomeCardStyle2>
