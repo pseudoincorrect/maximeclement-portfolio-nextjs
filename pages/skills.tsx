@@ -121,8 +121,9 @@ const SkillsPages: NextPage = () => {
   return (
     <PageContainer imagePath='/images/skills/background.jpg'>
       <PageHeaders
-        title='Skills of Maxime Clement'
-        description='Skills and Expertise of Maxime Clement. Programming Languages Framework Expertise software development Cloud Applications'
+        title='Skills'
+        description='Skills and Expertise of Maxime Clement.'
+        keywords='Programming Languages Framework Expertise software development Cloud Applications'
         page='skills'
         imageUrl='image?url=%2Fimages%2Fhome%2Fiot_diagram.jpg&w=640&q=80'
       />

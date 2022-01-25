@@ -94,8 +94,9 @@ const ContactPage: NextPage = () => {
   return (
     <PageContainer imagePath='/images/contact/background.jpg'>
       <PageHeaders
-        title='Contact Page to reach Maxime Clement'
+        title='Contact'
         description='Contact page to reach Maxime Clement with his email address'
+        keywords='contact address email link'
         page='contact'
         imageUrl='image?url=%2Fimages%2Fhome%2Fmax_pict.jpg&w=1920&q=80'
       />

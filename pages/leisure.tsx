@@ -45,8 +45,9 @@ const LeisuresPage: NextPage = () => {
   return (
     <PageContainer imagePath='/images/leisures/background.jpg'>
       <PageHeaders
-        title='Leisure Activities of Maxime Clement'
+        title='Outside Work'
         description='What Maxime Clement is doing outside work'
+        keywords='Leisure sport holidays lifestyle music'
         page='leisure'
         imageUrl='image?url=%2Fimages%2Fleisures%2Fbackground.jpg&w=640&q=50'
       />
