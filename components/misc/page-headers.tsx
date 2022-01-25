@@ -8,7 +8,7 @@ interface PageHeadersProps {
   imageUrl: string;
 }
 
-const websiteUlr = 'https://maximeclement-portfolio-nextjs.vercel.app';
+const websiteUlr = 'https://maximeclement.com';
 
 export default function PageHeaders({
   title,
