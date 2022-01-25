@@ -273,7 +273,7 @@
       },
       {
         "path": "/images/projects/pocsd/microelectronics.jpg",
-        "alt": "microelectronics book"
+        "alt": "Microelectronics book"
       }
     ],
     "tags": "FPGA, Verliog, Block Diagrams, Teaching, Digital Design, Computer Architecture",
@@ -349,7 +349,7 @@
     "detailsPictures": [
       {
         "path": "/images/projects/nerd/system.png",
-        "alt": "system architecture"
+        "alt": "System architecture"
       },
       {
         "path": "/images/projects/nerd/rat.png",
@@ -363,7 +363,7 @@
   {
     "title": "Wireless Data Sensor Link Integrated to a High Speed Cable Robot",
     "mainPictures": [
-      { "path": "/images/projects/moth/pcb.jpg", "alt": "wireless PCB" },
+      { "path": "/images/projects/moth/pcb.jpg", "alt": "Wireless PCB" },
       { "path": "/images/projects/moth/moth.jpg", "alt": "Moth" }
     ],
     "summary": "<p> <b> Implementation of wireless communication system</b> for the study of&nbsp;flight learning process of animal such as moths. For this purpose we needed to characterizing &nbsp;the <b> electrophysiological signals in animals muscles</b> and their response to stimulations such as the detection of a pheromone (smelling). Study of the process of learning, to further enrich the neural network based algorithms in computer science (mainly used in <b> Artificial Intelligence</b> ).&nbsp;</p> <p> Key points:</p> <ul> <li> Bluetooth transmission system</li> <li> GUI with <a target='_blank' href='https://www.qt.io/'> Qt</a> in C++</li> <li> firmware written in C (<a target='_blank' href='https://www.st.com/en/microcontrollers-microprocessors/stm32f0-series.html'> STM32</a> )</li> <li> Litterature review of electrophysiological acquisition systems</li> </ul> ",
@@ -371,7 +371,7 @@
     "detailsPictures": [
       {
         "path": "/images/projects/moth/prototype.jpg",
-        "alt": "system prototype"
+        "alt": "System prototype"
       },
       { "path": "/images/projects/moth/pcb.jpg", "alt": "PCB" }
     ],

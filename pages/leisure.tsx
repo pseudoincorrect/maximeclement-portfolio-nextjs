@@ -1,32 +1,45 @@
-import { Box, Card, styled } from '@mui/material';
+import { Box, Card, styled, Typography } from '@mui/material';
 import type { NextPage } from 'next';
 import PageContainer from '../components/layout/page-container';
+import Carousel from '../components/misc/carousel';
 import PageHeaders from '../components/misc/page-headers';
 
-const ContactPageBox = styled(Box)(({ theme }) => ({
-  width: '100%',
-  height: '75vh',
+const LeisurePageBox = styled(Box)(({ theme }) => ({
   display: 'flex',
+  flexDirection: 'column',
+  // justifyContent: 'space-evenly',
+  width: '100%',
+  height: '100%',
   alignItems: 'center',
-  justifyContent: 'center',
+  overflow: 'hidden',
+  marginTop: '5rem',
+  marginBottom: '5rem',
+  [theme.breakpoints.down('md')]: {
+    marginTop: '3rem',
+    marginBottom: '3rem',
+  },
+  // justifyContent: 'center',
 }));
 
-const ContactCardStyled = styled(Card)(({ theme }) => ({
+const CarouselDiv = styled('div')(({ theme }) => ({
+  marginTop: '5rem',
+  [theme.breakpoints.down('md')]: {
+    marginTop: '3rem',
+  },
   display: 'flex',
   width: '100%',
-  maxWidth: '30rem',
-  height: '100%',
-  maxHeight: '30rem',
-  flexDirection: 'column',
-  margin: '1rem',
-  borderRadius: '7px',
-  borderWidth: '0.15rem',
-  borderStyle: 'solid',
-  borderColor: theme.palette.secondary.main,
-  backgroundColor: 'rgba(0, 100, 255, 0.15)',
-  backdropFilter: 'blur(4px)',
-  opacity: '1',
+  justifyContent: 'center',
+  alignContent: 'center',
 }));
+
+const leisuresData = [
+  { path: '/images/leisures/guitar.jpg', alt: 'Guitar' },
+  { path: '/images/leisures/MTB.jpg', alt: 'Mountain Bike' },
+  { path: '/images/leisures/travelling.jpg', alt: 'Travelling' },
+  { path: '/images/leisures/reading.jpg', alt: 'Reading' },
+  { path: '/images/leisures/healthy.jpeg', alt: 'Healthy' },
+  { path: '/images/leisures/hangout.jpg', alt: 'Hangout' },
+];
 
 const LeisuresPage: NextPage = () => {
   return (
@@ -37,9 +50,12 @@ const LeisuresPage: NextPage = () => {
         page='leisure'
         imageUrl='image?url=%2Fimages%2Fleisures%2Fbackground.jpg&w=640&q=50'
       />
-      <ContactPageBox>
-        <ContactCardStyled></ContactCardStyled>
-      </ContactPageBox>
+      <LeisurePageBox>
+        <Typography variant='h3'>Let the images speak</Typography>
+        <CarouselDiv>
+          <Carousel images={leisuresData} height={255} maxWidth={500} />
+        </CarouselDiv>
+      </LeisurePageBox>
     </PageContainer>
   );
 };

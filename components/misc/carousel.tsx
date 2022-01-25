@@ -13,12 +13,20 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 interface CarouselProps {
   images: { path: string; alt: string }[];
+  height?: number;
+  maxWidth?: number;
+  isCover?: boolean;
 }
 
-function Carousel(props: CarouselProps) {
+function Carousel({
+  images,
+  height = 255,
+  maxWidth = 400,
+  isCover = false,
+}: CarouselProps) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = props.images.length;
+  const maxSteps = images.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -39,15 +47,15 @@ function Carousel(props: CarouselProps) {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents>
-        {props.images.map((step, index) => (
+        {images.map((step, index) => (
           <div key={`${index}`}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 sx={{
                   position: 'relative',
-                  height: 255,
+                  height: height,
                   display: 'block',
-                  maxWidth: 400,
+                  maxWidth: maxWidth,
                   overflow: 'hidden',
                   width: '100%',
                 }}>
@@ -58,7 +66,7 @@ function Carousel(props: CarouselProps) {
                   priority={false}
                   src={step.path}
                   layout='fill'
-                  objectFit='contain'
+                  objectFit={isCover ? 'cover' : 'contain'}
                   quality={80}
                 />
               </Box>
