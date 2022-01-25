@@ -56,7 +56,7 @@ function customTick({ payload, x, y, textAnchor, stroke, radius }: any) {
       x={x}
       y={y}
       fill='white'
-      text-anchor={textAnchor}>
+      textAnchor={textAnchor}>
       {payload.value}
     </text>
   );

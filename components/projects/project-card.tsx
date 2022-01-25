@@ -81,6 +81,7 @@ export default function ProjectCard({
   date,
 }: ProjectCardProps) {
   const theme = useTheme();
+
   return (
     <CardStyled>
       <ImageDiv>
@@ -117,7 +118,7 @@ export default function ProjectCard({
           <ImageDiv>
             <Image
               alt={title}
-              // priority={true}
+              priority={false}
               src={detailsPictures[0]}
               layout='fill'
               objectFit='contain'

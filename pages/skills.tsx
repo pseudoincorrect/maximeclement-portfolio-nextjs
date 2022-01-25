@@ -8,6 +8,7 @@ import SkillsCommunicationData from '../components/skills/skills-communication';
 import SkillsRadarCoding from '../components/skills/skills-radar-coding';
 
 import type { NextPage } from 'next';
+import PageHeaders from '../components/misc/page-headers';
 
 const SkillPageBox = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -119,6 +120,12 @@ function ContentList({ title, children }: any) {
 const SkillsPages: NextPage = () => {
   return (
     <PageContainer imagePath='/images/skills/background.jpg'>
+      <PageHeaders
+        title='Skills of Maxime Clement'
+        description='Skills and Expertise of Maxime Clement. Programming Languages Framework Expertise software development Cloud Applications'
+        page='skills'
+        imageUrl='image?url=%2Fimages%2Fhome%2Fiot_diagram.jpg&w=640&q=80'
+      />
       <SkillPageBox>
         <SkillTitleBox>
           <Typography variant='h2'>Skills</Typography>

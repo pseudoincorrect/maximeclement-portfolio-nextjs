@@ -17,32 +17,32 @@ const drawerData: AppDrawerItemData[] = [
   {
     name: 'Home',
     route: '/',
-    icon: <HomeIcon sx={{ fontSize: 50 }} />,
+    icon: <HomeIcon sx={{ fontSize: 40 }} />,
   },
   {
     name: 'Projects',
     route: '/projects',
-    icon: <CheckIcon sx={{ fontSize: 50 }} />,
+    icon: <CheckIcon sx={{ fontSize: 40 }} />,
   },
   {
     name: 'Skills',
     route: '/skills',
-    icon: <ArchitectureIcon sx={{ fontSize: 50 }} />,
+    icon: <ArchitectureIcon sx={{ fontSize: 40 }} />,
   },
   {
     name: 'Path',
     route: '/path',
-    icon: <AddRoadIcon sx={{ fontSize: 50 }} />,
+    icon: <AddRoadIcon sx={{ fontSize: 40 }} />,
   },
   {
     name: 'Leisure',
     route: '/leisure',
-    icon: <SportsTennisIcon sx={{ fontSize: 50 }} />,
+    icon: <SportsTennisIcon sx={{ fontSize: 40 }} />,
   },
   {
     name: 'Contact',
     route: '/contact',
-    icon: <ContactPageIcon sx={{ fontSize: 50 }} />,
+    icon: <ContactPageIcon sx={{ fontSize: 40 }} />,
   },
 ];
 
@@ -55,18 +55,18 @@ function AppDrawerItem(props: {
 
   return (
     <ListItem
+      // key={data.name}
       button
       onClick={(e) => {
         e.preventDefault();
         clicked();
         router.push(data.route);
       }}
-      sx={{ margin: '2rem 0' }}
-    >
+      sx={{ margin: '1.5rem 0' }}>
       <ListItemIcon>{data.icon}</ListItemIcon>
       <ListItemText
         primary={data.name}
-        primaryTypographyProps={{ fontSize: '20px', marginLeft: '1rem' }}
+        primaryTypographyProps={{ fontSize: '18px', marginLeft: '1rem' }}
       />
     </ListItem>
   );
@@ -77,9 +77,9 @@ export default function AppDrawerItems(props: { clicked: () => void }) {
     <List>
       {drawerData.map((d) => (
         <AppDrawerItem
+          key={d.name}
           data={{ name: d.name, route: d.route, icon: d.icon }}
           clicked={props.clicked}
-          key={d.name}
         />
       ))}
     </List>

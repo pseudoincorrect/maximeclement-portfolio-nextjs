@@ -56,7 +56,7 @@ function AppDrawer(props: AppDrawerProps) {
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
         open>
-        <DrawerContent clicked={drawerToggle} />
+        <DrawerContent clicked={() => {}} />
       </Drawer>
     </Box>
   );

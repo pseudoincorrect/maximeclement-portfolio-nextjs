@@ -1,6 +1,7 @@
 import { Box, styled } from '@mui/material';
 import type { NextPage } from 'next';
 import PageContainer from '../components/layout/page-container';
+import PageHeaders from '../components/misc/page-headers';
 import ProjectCard from '../components/projects/project-card';
 import projectData from '../components/projects/projects-data.json';
 
@@ -18,9 +19,16 @@ const ProjectPageBox = styled(Box)(({ theme }) => ({
 const ProjectsPage: NextPage = () => {
   return (
     <PageContainer imagePath='/images/projects/background.jpg'>
+      <PageHeaders
+        title='Projects IoT Maxime Clement'
+        description='Projects made by Maxime Clement revolving around Internet of Things (IoT). Fullstack application frontend backend hardware firmware deployment'
+        page='projects'
+        imageUrl='image?url=%2Fimages%2Fprojects%2FlorawanHealthOverview%2Farchitecture_1.png&w=1080&q=80'
+      />
       <ProjectPageBox>
-        {projectData.map((e) => (
+        {projectData.map((e, index) => (
           <ProjectCard
+            key={e.title}
             title={e.title}
             mainPictures={e.mainPictures}
             summary={e.summary}

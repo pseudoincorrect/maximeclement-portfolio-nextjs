@@ -5,6 +5,7 @@ import AppLink from '../components/misc/app-link';
 import PageContainer from '../components/layout/page-container';
 
 import type { NextPage } from 'next';
+import PageHeaders from '../components/misc/page-headers';
 
 const Bc = styled('b')(({ theme }) => ({
   color: theme.palette.secondary.main,
@@ -132,7 +133,7 @@ function Presentation() {
     <PresentationBox>
       <HomePictureDiv>
         <Image
-          alt='Maxime Clement'
+          alt='Maxime Clement Iot Engineer'
           priority={true}
           src='/images/home/max_pict.jpg'
           layout='fill'
@@ -210,7 +211,7 @@ function IotDescription() {
           }}>
           <ImageDeviceDiv>
             <Image
-              alt='Maxime Clement'
+              alt='IoT Device'
               priority={true}
               src='/images/home/echo_dot.jpg'
               layout='fill'
@@ -387,6 +388,12 @@ function EndNoteCard() {
 const HomePage: NextPage = () => {
   return (
     <PageContainer imagePath='/images/home/background.jpg'>
+      <PageHeaders
+        title='IoT Engineer Maxime Clement'
+        description='Presentation of Maxime Clement, Internet of Things (IoT) Engineer, focused on cloud technologies. Portfolio Home Page FullStack Backend Frontend IoT'
+        page=''
+        imageUrl='image?url=%2Fimages%2Fhome%2Fmax_pict.jpg&w=1920&q=80'
+      />
       <HomePageBox>
         <HomeTitle />
         <Presentation />

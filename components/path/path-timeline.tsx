@@ -71,7 +71,7 @@ function TimelineElement({
       contentStyle={{ background: colorBg, color: colorFg }}
       contentArrowStyle={{ borderRight: '7px solid  colorBg' }}
       date={dateRange}
-      iconStyle={{ background: colorBg, color: colorFg }}
+      iconStyle={{ background: 'black', color: colorFg }}
       icon={isSchool ? <SchoolIcon /> : <WorkIcon />}>
       <h2
         className='vertical-timeline-element-title'
@@ -101,8 +101,8 @@ function TimelineElement({
         }}>
         {location}
       </h4>
-      {keyPoints.map((e: string) => (
-        <DescriptionLi dangerouslySetInnerHTML={{ __html: e }} />
+      {keyPoints.map((e: string, i: number) => (
+        <DescriptionLi key={`${i}`} dangerouslySetInnerHTML={{ __html: e }} />
       ))}
     </VerticalTimelineElement>
   );
@@ -113,6 +113,7 @@ export default function PathTimeline() {
     <VerticalTimeline>
       {PathData.map((e) => (
         <TimelineElement
+          key={e.title}
           isSchool={e.isSchool}
           title={e.title}
           keyPoints={e.keyPoints}
