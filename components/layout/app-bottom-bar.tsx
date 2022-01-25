@@ -4,6 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Box, Divider, styled, SxProps, useTheme } from '@mui/material';
 import { SystemCssProperties } from '@mui/system';
 import Link from 'next/link';
+import CodeIcon from '@mui/icons-material/Code';
 
 export default function AppBottomBar() {
   const theme = useTheme();
@@ -45,6 +46,9 @@ export default function AppBottomBar() {
         </a>
         <a href='https://github.com/pseudoincorrect'>
           <GitHubIcon sx={iconStyle} />
+        </a>
+        <a href='https://www.codewars.com/users/pseudoincorrect'>
+          <CodeIcon sx={iconStyle} />
         </a>
         <Link href='/contact'>
           <a>
