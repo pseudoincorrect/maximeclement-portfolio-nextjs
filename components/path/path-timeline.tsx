@@ -84,6 +84,8 @@ function TimelineElement({
       </h2>
       <ImageDiv>
         <Image
+          placeholder='blur'
+          blurDataURL='/images/image_loader.jpg'
           alt={title}
           priority={true}
           src={picturePath}

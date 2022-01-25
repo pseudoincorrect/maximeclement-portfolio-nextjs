@@ -43,9 +43,7 @@ export default function SkillsFrameworkData() {
           </ul>
         </li>
       </ul>
-      <div className='title-lvl-1'>
-        Electronic Design Automation Software (PCB design)
-      </div>
+      <div className='title-lvl-1'>PCB Design (EDA)</div>
       <ul>
         <li>Altium Designer</li>
         <li>Eagle (Autodesk, Cadsoft)</li>

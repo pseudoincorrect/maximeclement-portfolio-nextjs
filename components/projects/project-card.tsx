@@ -9,7 +9,7 @@ import {
   useTheme,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Image from 'next/image';
+import Carousel from '../misc/carousel';
 
 const CardStyled = styled(Card)(({ theme }) => ({
   width: '90%',
@@ -31,42 +31,28 @@ const CardStyled = styled(Card)(({ theme }) => ({
 
 interface ProjectCardProps {
   title: string;
-  mainPictures: string[];
+  mainPictures: { path: string; alt: string }[];
   summary: string;
   details: string;
-  detailsPictures: string[];
+  detailsPictures: { path: string; alt: string }[];
   tags: string;
   location: string;
   date: string;
 }
 
-const ImageDiv = styled('div')(({ theme }) => ({
-  position: 'relative',
+const CarouselDiv = styled('div')(({ theme }) => ({
   display: 'flex',
-  width: '90%',
-  margin: '1rem',
-  height: '20rem',
-  [theme.breakpoints.down('md')]: {
-    height: '17rem',
-  },
-
-  [theme.breakpoints.down('sm')]: {
-    height: '14rem',
-  },
-
-  [theme.breakpoints.down('xs')]: {
-    height: '10rem',
-  },
+  justifyContent: 'center',
 }));
 
 const HtmlTxtBox = styled('span')(({ theme }) => ({
   textAlign: 'justify',
   margin: '0 1rem',
   '&  a': {
-    color: theme.palette.warning.main,
+    color: theme.palette.info.main,
   },
   '&  b': {
-    color: theme.palette.info.main,
+    color: theme.palette.warning.main,
   },
 }));
 
@@ -84,21 +70,15 @@ export default function ProjectCard({
 
   return (
     <CardStyled>
-      <ImageDiv>
-        <Image
-          alt={title}
-          // priority={true}
-          src={mainPictures[0]}
-          layout='fill'
-          objectFit='contain'
-          quality={80}
-        />
-      </ImageDiv>
-      <div style={{ margin: '0.5rem' }}>
-        <Typography variant='h4' align='center'>
+      <div style={{ margin: '1rem' }}>
+        <Typography variant='h3' align='center'>
           {title}
         </Typography>
       </div>
+      <CarouselDiv>
+        <Carousel images={mainPictures} />
+      </CarouselDiv>
+
       <HtmlTxtBox dangerouslySetInnerHTML={{ __html: summary }} />
 
       <Accordion sx={{ backgroundColor: 'transparent' }}>
@@ -115,16 +95,9 @@ export default function ProjectCard({
         </AccordionSummary>
 
         <AccordionDetails>
-          <ImageDiv>
-            <Image
-              alt={title}
-              priority={false}
-              src={detailsPictures[0]}
-              layout='fill'
-              objectFit='contain'
-              quality={80}
-            />
-          </ImageDiv>
+          <CarouselDiv>
+            <Carousel images={detailsPictures} />
+          </CarouselDiv>
 
           <HtmlTxtBox dangerouslySetInnerHTML={{ __html: details }} />
         </AccordionDetails>

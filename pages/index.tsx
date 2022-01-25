@@ -99,7 +99,7 @@ const homeCardBase = (theme: any): any => ({
   opacity: '1',
   textAlign: 'center',
   width: '90%',
-  maxWidth: '60rem',
+  maxWidth: '50rem',
   [theme.breakpoints.down('md')]: {
     width: '95%',
   },
@@ -133,6 +133,8 @@ function Presentation() {
     <PresentationBox>
       <HomePictureDiv>
         <Image
+          placeholder='blur'
+          blurDataURL='/images/image_loader.jpg'
           alt='Maxime Clement Iot Engineer'
           priority={true}
           src='/images/home/max_pict.jpg'
@@ -166,7 +168,7 @@ function IotDescription() {
       <Typography align='justify'>
         You may have noticed the huge title up there with this catchy acronym:{' '}
         <AppLink size='20px' href='/projects' content='IoT' />.
-      </Typography>{' '}
+      </Typography>
       <Typography align='justify'>Well, what is it then ?</Typography>
       <br />
       <Typography align='justify' color={theme.palette.grey[300]}>
@@ -187,6 +189,28 @@ function IotDescription() {
       </Typography>
       <br />
       <Grid container spacing={2}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <ImageDeviceDiv>
+            <Image
+              placeholder='blur'
+              blurDataURL='/images/image_loader.jpg'
+              alt='IoT Device'
+              priority={true}
+              src='/images/home/echo_dot.jpg'
+              layout='fill'
+              objectFit='cover'
+              quality={80}
+            />
+          </ImageDeviceDiv>
+        </Grid>
         <Grid item xs={12} sm={6}>
           <div style={{ textAlign: 'left', color: theme.palette.grey[300] }}>
             Few examples:
@@ -199,26 +223,6 @@ function IotDescription() {
               <li>Connected sensors on power grids</li>
             </ul>
           </div>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={6}
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <ImageDeviceDiv>
-            <Image
-              alt='IoT Device'
-              priority={true}
-              src='/images/home/echo_dot.jpg'
-              layout='fill'
-              objectFit='cover'
-              quality={80}
-            />
-          </ImageDeviceDiv>
         </Grid>
       </Grid>
     </HomeCardStyle1>
@@ -257,6 +261,8 @@ function ToolsDescription() {
           }}>
           <ImageDiagramDiv>
             <Image
+              placeholder='blur'
+              blurDataURL='/images/image_loader.jpg'
               alt='Maxime Clement'
               priority={true}
               src='/images/home/iot_diagram.jpg'
@@ -302,45 +308,62 @@ function SkillsDescription() {
         involved in this process. I try as much as I can to{' '}
         <Bc>pick the right tool for the current job</Bc>.
       </p>
-
-      <p style={{ textAlign: 'left' }}>
-        {' '}
-        I have mainly used (language and frameworks mixed):{' '}
-      </p>
-      <ul style={{ textAlign: 'left' }}>
-        <li>
-          {' '}
-          <Bc> Typescript (or JS) </Bc> for the backend development{' '}
-        </li>
-        <li>
-          {' '}
-          <Bc> Serverless (CDK) and Docker </Bc> as a backend architecture{' '}
-        </li>
-        <li>
-          {' '}
-          <Bc> React (or Angular) </Bc> on the frontend{' '}
-        </li>
-        <li>
-          {' '}
-          <Bc> AWS </Bc> for the deployment and CI/CD{' '}
-        </li>
-        <li>
-          {' '}
-          <Bc> Python </Bc> for scripting, DSP prototyping, algorithms design{' '}
-        </li>
-        <li>
-          {' '}
-          <Bc> Dart/Flutter </Bc> for mobile application development{' '}
-        </li>
-        <li>
-          {' '}
-          <Bc> C </Bc> for firmware programming{' '}
-        </li>
-        <li>
-          {' '}
-          <Bc> Altium (or Eagle) </Bc> for the Printed Circuit Board design{' '}
-        </li>
-      </ul>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={8}>
+          <p style={{ textAlign: 'left' }}>
+            I have mainly used (language and frameworks mixed):
+          </p>
+          <ul style={{ textAlign: 'left' }}>
+            <li>
+              <Bc> Typescript (or JS) </Bc> for the backend development
+            </li>
+            <li>
+              <Bc> Serverless (CDK) and Docker </Bc> as a backend architecture
+            </li>
+            <li>
+              <Bc> React (or Angular) </Bc> on the frontend
+            </li>
+            <li>
+              <Bc> AWS </Bc> for the deployment and CI/CD
+            </li>
+            <li>
+              <Bc> Python </Bc> for scripting, DSP prototyping, algorithms
+              design
+            </li>
+            <li>
+              <Bc> Dart/Flutter </Bc> for mobile application development
+            </li>
+            <li>
+              <Bc> C </Bc> for firmware programming
+            </li>
+            <li>
+              <Bc> Altium (or Eagle) </Bc> for the Printed Circuit Board design
+            </li>
+          </ul>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={4}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <ImageDiagramDiv>
+            <Image
+              placeholder='blur'
+              blurDataURL='/images/image_loader.jpg'
+              alt='Maxime Clement'
+              priority={true}
+              src='/images/home/programming_languages.jpg'
+              layout='fill'
+              objectFit='cover'
+              quality={80}
+            />
+          </ImageDiagramDiv>
+        </Grid>
+      </Grid>
 
       <p style={{ textAlign: 'justify' }}>
         A long list of Framework, SDK, Vendors IPs, and hardware are used along
@@ -378,7 +401,7 @@ function EndNoteCard() {
           <Bc>
             <AppLink size='16px' href='/contact' content='Contact' />
           </Bc>
-        </u>{' '}
+        </u>
         me to discuss it.
       </p>
     </HomeCardStyle2>

@@ -11,6 +11,7 @@ import { Fragment } from 'react';
 import MainLayout from '../components/layout/main-layout';
 import createEmotionCache from '../helpers/createEmotionCache';
 import theme from '../helpers/theme';
+import PageHeaders from '../components/misc/page-headers';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -23,6 +24,12 @@ export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return (
     <CacheProvider value={emotionCache}>
+      <PageHeaders
+        title='IoT Engineer Maxime Clement'
+        description='Presentation of Maxime Clement, Internet of Things (IoT) Engineer, focused on cloud technologies. Portfolio Home Page FullStack Backend Frontend IoT'
+        page=''
+        imageUrl='image?url=%2Fimages%2Fhome%2Fmax_pict.jpg&w=1920&q=80'
+      />
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <MainLayout>
