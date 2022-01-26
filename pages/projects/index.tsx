@@ -93,7 +93,7 @@ const ProjectsPage: NextPage = () => {
         description='Projects made by Maxime Clement revolving around Internet of Things (IoT).'
         keywords='Fullstack application frontend backend hardware firmware deployment'
         page='projects'
-        imageUrl='image?url=%2Fimages%2Fprojects%2FlorawanHealthOverview%2Farchitecture_1.png&w=1080&q=80'
+        imageUrl='/_next/image?url=%2Fimages%2Fprojects%2FlorawanHealthOverview%2Farchitecture_1.png&w=1080&q=80'
       />
       <ProjectPageBox>
         {projectData.map((e, index) => {

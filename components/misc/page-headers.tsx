@@ -37,7 +37,7 @@ export default function PageHeaders({
         <meta property='og:title' content={title} key='title' />
         <meta
           property='og:image'
-          content={`${websiteUlr}/_next/${imageUrl}`}
+          content={`${websiteUlr}${imageUrl}`}
           key='og:image'
         />
         <meta

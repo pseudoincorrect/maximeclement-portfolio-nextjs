@@ -125,7 +125,7 @@ const SkillsPages: NextPage = () => {
         description='Skills and Expertise of Maxime Clement.'
         keywords='Programming Languages Framework Expertise software development Cloud Applications'
         page='skills'
-        imageUrl='image?url=%2Fimages%2Fhome%2Fiot_diagram.jpg&w=640&q=80'
+        imageUrl='/_next/image?url=%2Fimages%2Fhome%2Fiot_diagram.jpg&w=640&q=80'
       />
       <SkillPageBox>
         <SkillTitleBox>

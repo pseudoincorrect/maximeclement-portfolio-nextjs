@@ -49,7 +49,7 @@ const LeisuresPage: NextPage = () => {
         description='What Maxime Clement is doing outside work'
         keywords='Leisure sport holidays lifestyle music'
         page='leisure'
-        imageUrl='image?url=%2Fimages%2Fleisures%2Fbackground.jpg&w=640&q=50'
+        imageUrl='/_next/image?url=%2Fimages%2Fleisures%2Fbackground.jpg&w=640&q=50'
       />
       <LeisurePageBox>
         <Typography variant='h3'>Let the images speak</Typography>

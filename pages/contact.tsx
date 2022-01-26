@@ -98,7 +98,7 @@ const ContactPage: NextPage = () => {
         description='Contact page to reach Maxime Clement with his email address'
         keywords='contact address email link'
         page='contact'
-        imageUrl='image?url=%2Fimages%2Fhome%2Fmax_pict.jpg&w=1920&q=80'
+        imageUrl='/_next/image?url=%2Fimages%2Fhome%2Fmax_pict.jpg&w=1920&q=80'
       />
       <ContactPageBox>
         <ContactCard />

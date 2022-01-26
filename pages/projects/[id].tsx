@@ -38,11 +38,11 @@ const ProjectsPage: NextPage = () => {
   return (
     <PageContainer imagePath='/images/projects/background.jpg'>
       <PageHeaders
-        title='Projects'
-        description='Projects made by Maxime Clement revolving around Internet of Things (IoT).'
-        keywords='Fullstack application frontend backend hardware firmware deployment'
-        page='projects'
-        imageUrl='image?url=%2Fimages%2Fprojects%2FlorawanHealthOverview%2Farchitecture_1.png&w=1080&q=80'
+        title={`Project${project.title}`}
+        description={project.shortSummary}
+        keywords={project.tags}
+        page={`project/${idNum}`}
+        imageUrl={project.mainPictures[0].path}
       />
       <ProjectPageBox>
         <ProjectCard
