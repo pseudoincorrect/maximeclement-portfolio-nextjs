@@ -21,12 +21,14 @@ const CardStyled = styled(Card)(({ theme }) => ({
     margin: '0.5rem',
     width: '95%',
   },
-  borderWidth: '0.15rem',
-  borderStyle: 'solid',
-  borderColor: theme.palette.primary.main,
-  backgroundColor: 'transparent',
+  // backgroundColor: 'transparent',
+  backgroundColor: 'rgba(0,0,0,0.5)',
   backdropFilter: 'blur(4px)',
   opacity: '1',
+  borderRadius: '7px',
+  border: '3px solid rgba(0, 0, 0, 0.2)',
+  boxShadow:
+    '0 6px 12px 0 rgba(0, 0, 0, 0.3), 0 8px 20px 0 rgba(0, 0, 0, 0.29);',
 }));
 
 interface ProjectCardProps {
