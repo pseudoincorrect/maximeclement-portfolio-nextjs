@@ -25,8 +25,9 @@ export default function MyApp(props: MyAppProps) {
   return (
     <CacheProvider value={emotionCache}>
       <PageHeaders
-        title='IoT Engineer Maxime Clement'
-        description='Presentation of Maxime Clement, Internet of Things (IoT) Engineer, focused on cloud technologies. Portfolio Home Page FullStack Backend Frontend IoT'
+        title='IoT Engineer'
+        description='Presentation of Maxime Clement, Internet of Things (IoT) Engineer, focused on cloud technologies.'
+        keywords='Portfolio Home Page FullStack Backend Frontend IoT'
         page=''
         imageUrl='image?url=%2Fimages%2Fhome%2Fmax_pict.jpg&w=1920&q=80'
       />
