@@ -134,7 +134,7 @@ function Presentation() {
       <HomePictureDiv>
         <Image
           placeholder='blur'
-          blurDataURL='/images/image_loader.jpg'
+          blurDataURL='/images/home/max_pict.jpg'
           alt='Maxime Clement Iot Engineer'
           priority={true}
           src='/images/home/max_pict.jpg'
