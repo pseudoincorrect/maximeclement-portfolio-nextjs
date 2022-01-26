@@ -28,11 +28,11 @@ export default function PageHeaders({
         />
         <meta http-equiv='cleartype' content='on' key='cleartype' />
         {/* <meta name='robots' content='index, follow' key='robots1' /> */}
-        <meta name='robots' content='noodp' key='robots2' />
         {/* Title and Description */}
         <title>{title}</title>
-        <meta property='description' content={description} key='description' />
+        <meta name='description' content={description} key='description' />
         <meta name='keywords' content={keywords} key='keywords' />
+        <meta name='robots' content='noodp,noydir' key='robots2' />
         {/* OpenGrap */}
         <meta property='og:title' content={title} key='title' />
         <meta
@@ -52,18 +52,6 @@ export default function PageHeaders({
         />
         <meta property='og:type' content='website' key='og:type' />
         <meta property='og:locale' content='en_GB' key='og:locale' />
-        {/* ItemProps */}
-        <meta itemProp='name' content={title} key='itemPropName' />
-        <meta
-          itemProp='description'
-          content={description}
-          key='itemPropDescription'
-        />
-        <meta
-          itemProp='url'
-          content={`${websiteUlr}/${page}`}
-          key='itemPropUrl'
-        />
       </Head>
     </Fragment>
   );
