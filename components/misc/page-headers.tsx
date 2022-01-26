@@ -9,7 +9,7 @@ interface PageHeadersProps {
   imageUrl: string;
 }
 
-const websiteUlr = 'https://maximeclement.com';
+const websiteUlr = 'https://www.maximeclement.com';
 
 export default function PageHeaders({
   title,
