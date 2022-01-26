@@ -49,7 +49,7 @@
         "alt": "Unfolded PCB Wootch"
       }
     ],
-    "shortSummary": "Device to monitor your door movement and keep you safe. Small IoT device with display, backend and CLI for managing devices.",
+    "shortSummary": "Fullstack Iot Device to monitor your door movement and keep you safe. Small wifi enabled device with display, backend and CLI for managing devices.",
     "summary": "<p> Wootch is an IoT device to <b> monitor a door or any object activity </b> and detect whether it is being moved. It then sends notifications to your registered device (phone or other) in case any activity is happening. Its intuitive Embedded UI helps you to set your level of guard ! (It can vibrate as soon as its door/object get touched, send you a message or let you live your life). It is <b> connected to a cloud application </b> to make sense of the sensors' data. </p> <p> This one is <b> personnal project </b> where I can  experiment with technologies new to me. Namely, Embedded UI (LVGL), Wifi enable MCU (ESP32) and Serverless Application (Serverless Framework). </p> <p> Key points: </p> <ul> <li> PCB Design integrating esp32 and LCD </li> <li> Embedded UI (LVGL) with touch control </li>  <li> Serverless infrastructure on AWS Cloud</li>  <li> AWS-IoT core with MQTT </li> </ul> <p> Project on <a href='https://github.com/pseudoincorrect/Wootch'> Github</a> </p> ",
     "details": " <p> Wootch's PCB has been made on Altium Designer. it features: </p> <ul> <li> Battery management, protection and regulators (buck) </li> <li> Inertial Measurement Unit (IMU, accelero + gyro) </li> <li> FPC connector for 3.5 inches LCD (480*320px) touch capacitive </li> <li> Wifi enable MCU (esp32) </li> <li> Vibration motor and controller IC </li> <li> Speaker amplifier </li> <li> USB C charging </li> <li> Push buttons and RGB LED </li> <li> Programer/debugger </li> </ul> <p> The code is written in C (not C++) along the <b> ESP-IDF SDK </b>. its main component are the following: </p> <ul> <li> ESP-IDF SDK, peripheral, wifi, RTOS. </li> <li> LvGL graphical library, to easily create responsive UI and provide support for the touch sensitive screen. </li> <li> esp_mpu60x0_C, MPU6050 IC from Invensense driver in C. </li> <li> ESP-AWS-IOT to interface with the AWS IoT-core service and provide a light-weight, fast and secured with AWS servers. It leverages the MQTT protocol with asymetric key exchange, symetric encryption. </li> </ul> <p> The Backend will use the <b>serverless framework</b>: </p> <ul> <li> Receive MQTT messages, </li> <li> Extract data and store them in a dynamoDB Database </li> <li> Run analytics on the stored data </li> <li> Manage users </li> <li> Manage IoT \"things\" and secure their data link </li> </ul> ",
     "detailsPictures": [
@@ -131,7 +131,7 @@
     "date": "2018 - Now"
   },
   {
-    "title": "Thread Web Watch",
+    "title": "Web Thread Watch",
     "mainPictures": [
       {
         "path": "/images/projects/mesh/wristwatch.jpg",

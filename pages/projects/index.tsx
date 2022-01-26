@@ -1,9 +1,17 @@
-import { Box, Card, styled, Typography, useTheme } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardActionArea,
+  styled,
+  Typography,
+  useTheme,
+} from '@mui/material';
 import type { NextPage } from 'next';
-import PageContainer from '../components/layout/page-container';
-import PageHeaders from '../components/misc/page-headers';
-import projectData from '../components/projects/projects-data.json';
+import PageContainer from '../../components/layout/page-container';
+import PageHeaders from '../../components/misc/page-headers';
+import projectData from '../../components/projects/projects-data.json';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const ProjectPageBox = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -30,45 +38,49 @@ const CardShortProjStyled = styled(Card)(({ theme }) => ({
   },
 }));
 
-function ShortProjectCard({ picture, title, summary }: any) {
+function ShortProjectCard({ picture, title, summary, projectIndex }: any) {
+  const router = useRouter();
   const theme = useTheme();
+
   return (
     <CardShortProjStyled>
-      <div
-        style={{
-          width: '100%',
-          height: '150px',
-          position: 'relative',
-          marginBottom: '1rem',
-        }}>
-        <Image
-          placeholder='blur'
-          blurDataURL='/images/image_loader.jpg'
-          alt={picture.alt}
-          priority={true}
-          src={picture.path}
-          layout='fill'
-          objectFit='cover'
-          quality={80}
-        />
-      </div>
-      <Typography
-        variant='h5'
-        align='center'
-        fontWeight='bold'
-        color={theme.palette.warning.main}
-        sx={{ marginBottom: '0.5em' }}>
-        {title}
-      </Typography>
-      <Typography
-        align='justify'
-        sx={{
-          marginRight: '0.5em',
-          marginLeft: '0.5em',
-          marginBottom: '0.5em',
-        }}>
-        {summary}
-      </Typography>
+      <CardActionArea onClick={() => router.push(`/projects/${projectIndex}`)}>
+        <div
+          style={{
+            width: '100%',
+            height: '150px',
+            position: 'relative',
+            marginBottom: '1rem',
+          }}>
+          <Image
+            placeholder='blur'
+            blurDataURL='/images/image_loader.jpg'
+            alt={picture.alt}
+            priority={true}
+            src={picture.path}
+            layout='fill'
+            objectFit='cover'
+            quality={80}
+          />
+        </div>
+        <Typography
+          variant='h5'
+          align='center'
+          fontWeight='bold'
+          color={theme.palette.warning.main}
+          sx={{ marginBottom: '0.5em' }}>
+          {title}
+        </Typography>
+        <Typography
+          align='justify'
+          sx={{
+            marginRight: '0.5em',
+            marginLeft: '0.5em',
+            marginBottom: '0.5em',
+          }}>
+          {summary}
+        </Typography>
+      </CardActionArea>
     </CardShortProjStyled>
   );
 }
@@ -88,6 +100,7 @@ const ProjectsPage: NextPage = () => {
           return (
             <ShortProjectCard
               key={`${index}${e.title}`}
+              projectIndex={index}
               picture={e.mainPictures[0]}
               title={e.title}
               summary={e.shortSummary}

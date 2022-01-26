@@ -1,9 +1,9 @@
 import { Box, styled } from '@mui/material';
 import type { NextPage } from 'next';
-import PageContainer from '../components/layout/page-container';
-import PageHeaders from '../components/misc/page-headers';
-import ProjectCard from '../components/projects/project-card';
-import projectData from '../components/projects/projects-data.json';
+import PageContainer from '../../components/layout/page-container';
+import PageHeaders from '../../components/misc/page-headers';
+import ProjectCard from '../../components/projects/project-card';
+import projectData from '../../components/projects/projects-data.json';
 
 const ProjectPageBox = styled(Box)(({ theme }) => ({
   display: 'flex',
