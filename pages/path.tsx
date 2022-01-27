@@ -12,7 +12,7 @@ const PathPage: NextPage = () => {
   return (
     <PageContainer imagePath='/images/path/background.jpg'>
       <PageHeaders
-        title='Path'
+        title='Career'
         description='Previous Experiences and Eduction of Maxime Clement.'
         keywords='School Diploma Work Experiences University CV Location Timeline'
         page='path'

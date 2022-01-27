@@ -30,7 +30,7 @@ const drawerData: AppDrawerItemData[] = [
     icon: <ArchitectureIcon sx={{ fontSize: 40 }} />,
   },
   {
-    name: 'Path',
+    name: 'Career',
     route: '/path',
     icon: <AddRoadIcon sx={{ fontSize: 40 }} />,
   },

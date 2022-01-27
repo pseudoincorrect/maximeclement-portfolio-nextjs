@@ -273,14 +273,14 @@ function ToolsDescription() {
   return (
     <HomeCardStyle2>
       <Typography align='justify'>
-        It happens that I have been working in this domain mixing
+        I have been working in this domain mixing
         <Bc> web technologies</Bc>,<Bc> software</Bc> and <Bc>hardware</Bc>{' '}
         since 2014.
       </Typography>
       <br />
       <Typography align='justify'>
-        Most of my projects were focused around creating both
-        <Bc> cloud application</Bc> and an <Bc>physical device</Bc> customized
+        Most of my projects were focused around combining both
+        <Bc> cloud application</Bc> and a <Bc>physical device</Bc> customized
         for our needs.
       </Typography>
       <br />
@@ -341,16 +341,16 @@ function SkillsDescription() {
       <p style={{ textAlign: 'justify' }}>
         Naturally, a large variety of tools and programming languages are
         involved in this process. I try as much as I can to{' '}
-        <Bc>pick the right tool for the current job</Bc>.
+        <Bc>pick the most appropriate tool for the job</Bc>.
       </p>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={8}>
           <p style={{ textAlign: 'left' }}>
-            I have mainly used (language and frameworks mixed):
+            Regarding languages and frameworks:
           </p>
           <ul style={{ textAlign: 'left' }}>
             <li>
-              <Bc> Typescript (or JS) </Bc> for the backend development
+              <Bc> Typescript (or JS) </Bc> for backend development
             </li>
             <li>
               <Bc> Serverless (CDK) and Docker </Bc> as a backend architecture
@@ -359,7 +359,7 @@ function SkillsDescription() {
               <Bc> React (or Angular) </Bc> on the frontend
             </li>
             <li>
-              <Bc> AWS </Bc> for the deployment and CI/CD
+              <Bc> AWS </Bc> for deployment and CI/CD
             </li>
             <li>
               <Bc> Python </Bc> for scripting, DSP prototyping, algorithms
@@ -372,7 +372,7 @@ function SkillsDescription() {
               <Bc> C </Bc> for firmware programming
             </li>
             <li>
-              <Bc> Altium (or Eagle) </Bc> for the Printed Circuit Board design
+              <Bc> Altium (or Eagle) </Bc> for Printed Circuit Board design
             </li>
           </ul>
         </Grid>
@@ -401,7 +401,7 @@ function SkillsDescription() {
       </Grid>
 
       <p style={{ textAlign: 'justify' }}>
-        A long list of Framework, SDK, Vendors IPs, and hardware are used along
+        A long list of frameworks, SDK, vendors IPs, and hardware are used along
         the way. <br />
         <br /> More information in the{' '}
         <u>
@@ -419,7 +419,7 @@ function SkillsDescription() {
             <AppLink size='20px' href='/projects' content='Projects' />
           </Bc>
         </u>{' '}
-        page gives a deeper overview of the kind of work I usualy do.
+        page gives a deeper overview of the kind of work I usually do.
       </p>
     </HomeCardStyle1>
   );
@@ -437,7 +437,7 @@ function EndNoteCard() {
             <AppLink size='16px' href='/contact' content='Contact' />
           </Bc>
         </u>{' '}
-        me to discuss it.
+        Reach out for me if you want to discuss it.
       </p>
     </HomeCardStyle2>
   );
