@@ -16,14 +16,9 @@ import type { NextPage } from 'next';
 import PageHeaders from '../components/misc/page-headers';
 
 const animatePop = keyframes`
-  0% {
-    opacity: 0;
-    transform: scale(0.5, 0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
+  0% { transform: scale(0, 0) ;opacity: 0; } 
+  80% { transform: scale(1.1, 1.1) ;opacity: 1; }
+  100% { transform: scale(1, 1);}
 `;
 
 const animateBlink = keyframes`
@@ -69,16 +64,13 @@ const HomePictureDiv = styled('div')(({ theme }) => ({
   height: '18rem',
   overflow: 'hidden',
   [theme.breakpoints.down('md')]: {
-    width: '18rem',
-    height: '18rem',
+    width: '13rem',
+    height: '13rem',
   },
   [theme.breakpoints.down('xs')]: {
     width: '13rem',
     height: '13rem',
   },
-  animationName: `${animatePop}`,
-  animationDuration: '0.3s',
-  animationTimingFunction: 'cubic-bezier(.26, .53, .74, 1.48)',
 }));
 
 const ImageDeviceDiv = styled('div')({
@@ -175,10 +167,16 @@ function Presentation() {
           quality={80}
         />
       </HomePictureDiv>
-
-      <Typography variant='h4' sx={{ marginTop: '1rem' }}>
-        Bonjour !
-      </Typography>
+      <Box
+        sx={{
+          marginTop: '1rem',
+          animationName: `${animatePop}`,
+          animationDuration: '1s',
+          animationTimingFunction: 'cubic-bezier(.26, .53, .74, 1.48)',
+          animationFillMode: 'forwards',
+        }}>
+        <Typography variant='h3'>Bonjour !</Typography>
+      </Box>
       <Typography variant='h5' sx={{ marginTop: '1rem' }}>
         Maxime here, IoT Engineer (Internet of Things)
       </Typography>
@@ -193,7 +191,7 @@ function Presentation() {
             animationName: `${animateBlink}`,
             animationDuration: '1.5s',
             animationTimingFunction: 'cubic-bezier(.26, .53, .74, 1.48)',
-            animationDelay: '2s',
+            animationDelay: '3s',
           }}>
           <AppLink size='30px' href='/projects' content='Projects' />
         </Box>
