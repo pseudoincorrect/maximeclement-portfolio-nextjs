@@ -1,3 +1,33 @@
+const projectDataSize = 16;
+
+function getProjectsSubpaths() {
+  let projectPages = [];
+  for (let i = 0; i < projectDataSize; i++) {
+    projectPages.push(`/projects/${i}`);
+  }
+  return projectPages;
+}
+
+async function getPages(config) {
+  let paths = [
+    '/projects',
+    '/projects/all',
+    '/skills',
+    '/path',
+    '/leisure',
+    '/contact',
+  ];
+  let projectPages = getProjectsSubpaths();
+  paths = paths.concat(projectPages);
+
+  let pages = [];
+  paths.forEach(async (p) => {
+    const path = await config.transform(config, p);
+    pages.push(path);
+  });
+  return pages;
+}
+
 module.exports = {
   siteUrl: 'https://www.maximeclement.com',
   changefreq: 'monthly',
@@ -16,11 +46,7 @@ module.exports = {
       alternateRefs: config.alternateRefs ?? [],
     };
   },
-  additionalPaths: async (config) => [
-    await config.transform(config, '/projects'),
-    await config.transform(config, '/skills'),
-    await config.transform(config, '/path'),
-    await config.transform(config, '/leisure'),
-    await config.transform(config, '/contact'),
-  ],
+  additionalPaths: async (config) => {
+    return getPages(config);
+  },
 };

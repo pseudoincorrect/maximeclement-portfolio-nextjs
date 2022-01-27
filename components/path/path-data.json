@@ -8,9 +8,9 @@
     "colorBg": "rgba(0, 255, 255, 0.1)",
     "colorFg": "#FFF",
     "keyPoints": [
-      "<b>Management and implementation</b> of multiple projects. (5 main and 7 secondary ones)",
-      "IoT Fullstack applications: smartwatch with <b>fullstack</b> app, smart mask with <b>frontend</b>, Wifi monitoring device with <b>fullstack</b> app, Management tool for IoT device on <b>cloud</b>, ... ",
-      "Setting-up of an <b>electronic laboratory</b> for the division of Information Computing Technology (ICT)"
+      "IoT Fullstack applications: smartwatch with <b>fullstack</b> app, smart mask with <b>frontend</b>, Wifi monitoring device with <b>fullstack</b> app, Management tool for IoT device on <b>cloud</b> ",
+      "<b>Management and implementation</b> of multiple projects.",
+      "Setting-up of an <b>electronic laboratory</b> for the computer science division (ICT)"
     ]
   },
   {
@@ -37,36 +37,33 @@
     "colorFg": "#FFF",
     "keyPoints": [
       "Development of an <b> acquisition system </b>for moths electrophysiological signals",
-      "Feasibility study of the implementation of a cable robot which would follow a moth in-flight and record electrophysiological data.",
-      "Literature review of neuromuscular devices for in flight-moths"
+      "Feasibility study of the implementation of a cable robot which would follow a moth in-flight and record electrophysiological data."
     ]
   },
   {
     "isSchool": true,
-    "title": "MS. in Embedded Systems & Microsystems Engineering",
+    "title": "MS. in Embedded Systems",
     "location": "Université de Lorraine, Nancy, France",
     "dateRange": "2013 - 2014",
     "picturePath": "/images/path/ul.jpg",
     "colorBg": "rgba(255, 0, 0, 0.1)",
     "colorFg": "#FFF",
     "keyPoints": [
-      "Dual master degree in Embedded Systems & Microsystems",
-      "In parallel to my studies at ESSTIN",
+      "Dual master degree in Embedded Systems & Microsystems engineering",
       "Topics: <b>computer architecture</b>, hardware implementation, firmware design"
     ]
   },
   {
     "isSchool": true,
     "title": "MS. in System Control (Diplôme d'Ingénieur)",
-    "location": "Ecole Supérieure des Sciences et Technologies de l'Ingénieur de Nancy (ESSTIN), Nancy, France",
+    "location": "ESSTIN, Nancy, France",
     "dateRange": "2008 - 2014",
     "picturePath": "/images/path/esstin.jpg",
     "colorBg": "rgba(0, 255,  0, 0.1)",
     "colorFg": "#FFF",
     "keyPoints": [
       "ESSTIN is a “Grande Ecole d’ingénieur”, a school dedicated to form engineers on various subjects",
-      "Specification in Systems and Control, mixing <b>mathematics and computer sciences </b>",
-      "The first 3 years approached a large variety of topic around general sciences"
+      "Specification in Systems and Control, mixing <b>mathematics and computer sciences </b>"
     ]
   },
   {
@@ -79,8 +76,7 @@
     "colorFg": "#FFF",
     "keyPoints": [
       "Studied 8 months in Lulea, north of Sweden (practically on the arctic circle)",
-      "Topics were <b>computer sciences, electronic and embedded system</b>. This is the time I new which carrier to pursue (in IoT)",
-      "Created a passion for travelling and discovering new horizons"
+      "Topics were <b>computer sciences, electronic and embedded system</b>. This is the time I new which carrier to pursue (in IoT)"
     ]
   },
   {

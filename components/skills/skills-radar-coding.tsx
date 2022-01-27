@@ -68,7 +68,7 @@ export default function SkillsRadarCoding() {
       <RadarChart cx='50%' cy='50%' outerRadius='80%' data={data}>
         <PolarGrid />
         <PolarAngleAxis dataKey='subject' tick={customTick} />
-        <PolarRadiusAxis />
+        {/* <PolarRadiusAxis /> */}
         <Radar
           name='CodingSkills'
           dataKey='level'

@@ -29,7 +29,7 @@ export default function MyApp(props: MyAppProps) {
         description='Hello ! I am Maxime Clement, IoT Engineer (Internet of Things) focused on cloud technologies for physical devices. I can link anything to the web... at scale !'
         keywords='Portfolio Home Page FullStack Backend Frontend IoT'
         page=''
-        imageUrl='image?url=%2Fimages%2Fhome%2Fmax_pict.jpg&w=1920&q=80'
+        imageUrl='/_next/image?url=%2Fimages%2Fhome%2Fmax_pict.jpg&w=1920&q=80'
       />
       <ThemeProvider theme={theme}>
         <CssBaseline />

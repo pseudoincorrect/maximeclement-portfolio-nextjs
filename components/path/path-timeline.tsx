@@ -22,31 +22,11 @@ interface TimelineElementProps {
   colorFg: string;
 }
 
-const ImageDiv = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: '1rem',
-  hyphens: 'auto',
-  width: '100%',
-  height: '13rem',
-  [theme.breakpoints.down('md')]: {
-    height: '11rem',
-  },
-
-  [theme.breakpoints.down('sm')]: {
-    height: '9rem',
-  },
-
-  [theme.breakpoints.down('xs')]: {
-    height: '7rem',
-  },
-}));
-
 const DescriptionLi = styled('p')(({ theme }) => ({
-  fontSize: '16px',
+  fontSize: '15px',
   textAlign: 'justify',
-  textJustify: 'inter-word',
-  // wordBreak: 'break-all',
-  paddingBottom: '0.5rem',
+  textJustify: 'inter-character',
+  paddingBottom: '0rem',
   '& > b': {
     color: theme.palette.secondary.main,
   },
@@ -73,36 +53,37 @@ function TimelineElement({
       date={dateRange}
       iconStyle={{ background: 'black', color: colorFg }}
       icon={isSchool ? <SchoolIcon /> : <WorkIcon />}>
-      <h2
+      <h3
         className='vertical-timeline-element-title'
         style={{
           marginBottom: '1rem',
-          color: theme.palette.text.primary,
+          // color: theme.palette.warning.main,
           textAlign: 'center',
+          fontWeight: 'bold',
         }}>
         {title}
-      </h2>
-      <ImageDiv>
-        <Image
-          placeholder='blur'
-          blurDataURL='/images/image_loader.jpg'
-          alt={title}
-          priority={true}
-          src={picturePath}
-          layout='fill'
-          objectFit='contain'
-          quality={80}
-        />
-      </ImageDiv>
-      <h4
+      </h3>
+      <Image
+        placeholder='blur'
+        blurDataURL='/images/image_loader.jpg'
+        alt={title}
+        priority={true}
+        height='40rem'
+        width='100%'
+        src={picturePath}
+        layout='responsive'
+        objectFit='contain'
+        quality={80}
+      />
+      <h5
         className='vertical-timeline-element-subtitle'
         style={{
-          margin: '1rem ',
+          margin: '0.5rem ',
           color: theme.palette.grey[500],
           textAlign: 'center',
         }}>
         {location}
-      </h4>
+      </h5>
       {keyPoints.map((e: string, i: number) => (
         <DescriptionLi key={`${i}`} dangerouslySetInnerHTML={{ __html: e }} />
       ))}
