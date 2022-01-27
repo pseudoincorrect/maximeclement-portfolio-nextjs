@@ -1,4 +1,12 @@
-import { Box, Card, Grid, styled, Typography, useTheme } from '@mui/material';
+import {
+  Box,
+  Card,
+  Grid,
+  keyframes,
+  styled,
+  Typography,
+  useTheme,
+} from '@mui/material';
 import Image from 'next/image';
 
 import AppLink from '../components/misc/app-link';
@@ -6,6 +14,27 @@ import PageContainer from '../components/layout/page-container';
 
 import type { NextPage } from 'next';
 import PageHeaders from '../components/misc/page-headers';
+
+const animatePop = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+`;
+
+const animateBlink = keyframes`
+  0% { opacity: 1; }
+  17% { opacity: 0; }
+  34% { opacity: 1; }
+  51% { opacity: 0; }
+  68% { opacity: 1; }
+  85% { opacity: 0; }
+  100% { opacity: 1; }
+`;
 
 const Bc = styled('b')(({ theme }) => ({
   color: theme.palette.secondary.main,
@@ -47,6 +76,9 @@ const HomePictureDiv = styled('div')(({ theme }) => ({
     width: '13rem',
     height: '13rem',
   },
+  animationName: `${animatePop}`,
+  animationDuration: '0.3s',
+  animationTimingFunction: 'cubic-bezier(.26, .53, .74, 1.48)',
 }));
 
 const ImageDeviceDiv = styled('div')({
@@ -155,7 +187,16 @@ function Presentation() {
         <Typography variant='h5' display='inline'>
           Check my{' '}
         </Typography>
-        <AppLink size='30px' href='/projects' content='Projects' />
+        <Box
+          sx={{
+            display: 'inline',
+            animationName: `${animateBlink}`,
+            animationDuration: '1.5s',
+            animationTimingFunction: 'cubic-bezier(.26, .53, .74, 1.48)',
+            animationDelay: '2s',
+          }}>
+          <AppLink size='30px' href='/projects' content='Projects' />
+        </Box>
       </span>
     </PresentationBox>
   );
@@ -243,10 +284,6 @@ function ToolsDescription() {
         Most of my projects were focused around creating both
         <Bc> cloud application</Bc> and an <Bc>physical device</Bc> customized
         for our needs.
-        {/* The devices usually connected wirelessly to a router or a
-        smartphone before sending data online. The backend take care of the
-        message broker service, storage, event/data analysis and security.
-        Finally, a frontend either web or mobile was designed to present data. */}
       </Typography>
       <br />
       <Grid container spacing={2}>
