@@ -280,8 +280,8 @@ function ToolsDescription() {
       <br />
       <Typography align='justify'>
         Most of my projects were focused around combining both
-        <Bc> cloud application</Bc> and a <Bc>physical device</Bc> customized
-        for our needs.
+        <Bc> cloud applications</Bc> and <Bc>physical devices</Bc> to create a
+        novel solution for the given problematic.
       </Typography>
       <br />
       <Grid container spacing={2}>
@@ -434,10 +434,10 @@ function EndNoteCard() {
         <br />
         <u>
           <Bc>
-            <AppLink size='16px' href='/contact' content='Contact' />
+            <AppLink size='16px' href='/contact' content='Reach out' />
           </Bc>
         </u>{' '}
-        Reach out for me if you want to discuss it.
+        for me if you want to discuss it.
       </p>
     </HomeCardStyle2>
   );
