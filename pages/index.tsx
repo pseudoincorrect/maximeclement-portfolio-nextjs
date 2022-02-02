@@ -191,7 +191,7 @@ function Presentation() {
             animationName: `${animateBlink}`,
             animationDuration: '1.5s',
             animationTimingFunction: 'cubic-bezier(.26, .53, .74, 1.48)',
-            animationDelay: '3s',
+            animationDelay: '2s',
           }}>
           <AppLink size='30px' href='/projects' content='Projects' />
         </Box>
