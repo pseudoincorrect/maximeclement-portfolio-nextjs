@@ -7,7 +7,7 @@
       { "path": "/images/projects/bariot/bariot_tools.jpg", "alt": "Bariot Tools" }
     ],
     "shortSummary": "IoT / IIoT platform with things/user management, storage and visualization, in Go with Docker using microservices. Scalable and secure !",
-    "summary": "<p> Bariot is an <b> IoT / IIot (Industrial Internet of Things) platform </b> designed with modern standards of security, scalability, performances and devops practices. Bariot is used to create a <b> simple and scalable solutions to connect devices</b>, store data and offers visualizations tools. It is therefore a complete tool to quickly bring these online features to communication enabled devices at any scale. </p> <p> It is developed mainly in <b> Golang with docker </b> and use a wide range of industry standard technologies, such as MQTT, PostgreSQL, influxdb, etc... This project is inspired from the beautiful architecture of <a href='https://mainflux.com'> Mainflux</a>. It gave me a deep understanding of most of the technologies involved in IoT cloud platforms (not only) </p> <p> Key Points: <ul> <li> Microservices with Golang and Docker </li> <li> Distributed system with message queuing </li> <li> Fast and Horizontally scalable </li> <li> Secure encryption and secrets management </li> </ul> </p>  <p> Project on <a href='https://github.com/pseudoincorrect/Bariot'> Github </a> </p> ",
+    "summary": "<p> Bariot is an <b> IoT / IIot (Industrial Internet of Things) platform </b> designed with modern standards of security, scalability, performances and devops practices. Bariot is used to create a <b> simple and scalable solutions to connect devices</b>, store data and offers visualizations tools. It is therefore a complete tool to quickly bring these online features to communication enabled devices at any scale. </p> <p> It is developed mainly in <b> Golang with docker </b> and use a wide range of industry standard technologies, such as MQTT, PostgreSQL, influxdb, etc... This project is inspired from the beautiful architecture of <a href='https://mainflux.com'> Mainflux</a>. It gave me a deep understanding of most of the technologies involved in IoT cloud platforms (not only) </p> <p> Key Points: <ul> <li> Microservices with Golang and Docker </li> <li> Distributed system with message queuing </li> <li> Fast and Horizontally scalable </li> <li> Secure encryption and secrets management </li> </ul> </p>  <p> Project on <a href='https://github.com/pseudoincorrect/Bariot'> Github </a> </p>",
     "details": "Technologies used in Bariot: <ul> <li> Transport: <b> MQTT </b> </li> <li> Authentication/Authorization: <b> JWT </b> </li> <li> USER, THINGS storage: <b> PostgreSQL </b> </li> <li> THINGS DATA storage: <b> Influxdb </b> </li> <li> Services intercommunication: <b> gRpc </b> </li> <li> Services messaging: <b> Nats </b>  </li> </ul>  Technologies being added: <ul> <li> Transport: <b> OPC-UA </b> </li> <li> Data presentation: <b> Grafana </b> </li> <li> Reverse proxy: <b> Ngnix </b> </li> <li> Secret storage/management: <b> Vault </b> </li> <li> Caching: <b> Redis </b> </li> <li> CI/CD: <b> Gitlab </b> </li> </ul> </p> Bariot is opinionated, in the sense that storage and communications technologies are predefined (for now)",
     "tags": "IoT, IIoT, Online platform, Microservices, Docker, Golang",
     "location": "HBKU, Doha, Qatar",
@@ -28,7 +28,7 @@
     ],
     "shortSummary": "Evolution of LoraWan Health Overview with whole new wrist worn device and backend made with AWS services (CDK) for production.",
     "summary": " <p> The overall goal being to <b> monitor the health status of hundreds of persons </b> at a time within a perimeter of few hundreds of meters. The <b> typical scenario is for outdoor groups </b> , possibly elderly persons in retirement houses, outdoor workers under a tough weather, health-fragile children in schools, etc... </p> <p> It is a Fullstack IoT system to gather data from the wearer of our <b>LoraWan enabled custom wristwatches</b>. </p> <p> This is the next version of the <a href='https://maximeclement.com/projects/2'> LoraWan Health V1</a> with a new backend, new device, and adapted mobile app. It uses <b>AWS services with AWS CDK</b> for a simple and faster deployment to production compared to the containerized version. Services such as AWS wireless (LoraWan), cognito, dynamodb and timestream <b>increased the development speed as well as reducing its cost</b>. </p> <p> The device consist of<b> two Rigid/Flex PCBs</b> with a sandwiched round battery, placed inside a wrist worn garment. It measures the wearer heart-rate, temperature and movement to gather data in order to detect abnormal vital signs. </p> <p> Key Points: <ul> <li> Serverless with AWS-CDK </li> <li> AWS LoraWan Broker </li> <li> Fast to enter in production </li> <li> Rigid/Flex PCB assembly </li> </ul> </p>  ",
-    "details": " <p> This project page has been separated into to project pages 'LoraWan Health <b>V1</b>' and 'LoraWan Health <b>V2</b>' as they represents two distinct approach to its backend development. </p> <p> the previous version was using <b> docker with self-managed services </b> with quite a few moving parts and hence higher development complexity (for a team of 1 person). </p> <p> In this version I moved to a totally different architecture with <b> AWS services </b> which enabled for a much quicker development and much lower operation complexity, at the price of vendor locking.</p> ",
+    "details": " <p> This project page has been separated into to project pages 'LoraWan Health <b>V1</b>' and 'LoraWan Health <b>V2</b>' as they represents two distinct approach to its backend development. </p> <p> the previous version was using <b> docker with self-managed services </b> with quite a few moving parts and hence higher development complexity (for a team of 1 person). </p> <p> In this version I moved to a totally different architecture with <b> AWS services </b> which enabled for a much quicker development and much lower operation complexity, at the price of vendor locking.</p>",
     "tags": "",
     "location": "HBKU, Doha, Qatar",
     "date": "2021 - Now"
@@ -50,6 +50,20 @@
     "tags": "LoraWan, Full-Stack App, C prog., Flutter, NodeJs, PCB design, AWS",
     "location": "HBKU, Doha, Qatar",
     "date": "2019 - 2020"
+  },
+
+  {
+    "title": "This Website",
+    "mainPictures": [
+      { "path": "/images/projects/thisWebsite/homePage.jpg", "alt": "maximeclement.com home page" },
+      { "path": "/images/projects/thisWebsite/nextjs.jpg", "alt": "NextJS logo" }
+    ],
+    "shortSummary": "My personal website made with NextJS and MUI, you are on it right now :) this was the chance to do a bit of frontend and keep track of my projects.",
+    "summary": "<p> Well, even though this website is only static, it has been made with displaying optimization and <b>Search Engine Optimizations</b> in mind, thanks to NextJS and MUI. It represents quite some work, in the end (more than I would have thought), but that was fun and extremely instructive. </p>  <p> Initially this website was made with Angular 2. However since I was planning to teach <b>NextJS</b> and <b>ReactJS</b> to HBKU students, I decided to port it ! </p> <p> Project on <a href='https://github.com/pseudoincorrect/maximeclement-portfolio-nextjs'> Github </a> </p> ",
+    "details": "<p> That's a static and well optimized website, nothing too fancy though. </p>",
+    "tags": "NextJS, MUI, Server Side rendering, SEO",
+    "location": "HBKU, Doha, Qatar",
+    "date": "2019 "
   },
   {
     "title": "Wootch",
