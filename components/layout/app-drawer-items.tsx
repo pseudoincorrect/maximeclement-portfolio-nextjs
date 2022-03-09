@@ -2,6 +2,7 @@ import AddRoadIcon from '@mui/icons-material/AddRoad';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import CheckIcon from '@mui/icons-material/Check';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
+import FolderIcon from '@mui/icons-material/Folder';
 import HomeIcon from '@mui/icons-material/Home';
 import SportsTennisIcon from '@mui/icons-material/SportsTennis';
 import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
@@ -43,6 +44,11 @@ const drawerData: AppDrawerItemData[] = [
     name: 'Contact',
     route: '/contact',
     icon: <ContactPageIcon sx={{ fontSize: 40 }} />,
+  },
+  {
+    name: 'Documents',
+    route: '/documents',
+    icon: <FolderIcon sx={{ fontSize: 40 }} />,
   },
 ];
 
