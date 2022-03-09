@@ -59,8 +59,8 @@
       { "path": "/images/projects/thisWebsite/nextjs.jpg", "alt": "NextJS logo" }
     ],
     "shortSummary": "My personal website made with NextJS and MUI, you are on it right now :) this was the chance to do a bit of frontend and keep track of my projects.",
-    "summary": "<p> Well, even though this website is only static, it has been made with displaying optimization and <b>Search Engine Optimizations</b> in mind, thanks to NextJS and MUI. It represents quite some work, in the end (more than I would have thought), but that was fun and extremely instructive. </p>  <p> Initially this website was made with Angular 2. However since I was planning to teach <b>NextJS</b> and <b>ReactJS</b> to HBKU students, I decided to port it ! </p> <p> Project on <a href='https://github.com/pseudoincorrect/maximeclement-portfolio-nextjs'> Github </a> </p> ",
-    "details": "<p> That's a static and well optimized website, nothing too fancy though. Color selection and UI come from me. </p>",
+    "summary": "<p> Well, even though this website is only static, it has been made with display speed and <b>Search Engine Optimizations</b> in mind, thanks to NextJS and MUI. In the end, it was quite some work (more than I would have thought), but that was fun and extremely instructive. </p>  <p> The previous version of this website was made with Angular 2. However, since I was planning to teach <b>NextJS</b> and <b>ReactJS</b> to HBKU students, I decided to port it ! </p> <p> Project on <a href='https://github.com/pseudoincorrect/maximeclement-portfolio-nextjs'> Github </a> </p> ",
+    "details": "<p> That's a static and well optimized website, nothing too fancy though.</p> <p> Colors selection and UI design come from me. </p>",
     "tags": "NextJS, MUI, Server Side rendering, SEO",
     "location": "HBKU, Doha, Qatar",
     "date": "2019 "
