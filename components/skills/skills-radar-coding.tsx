@@ -19,7 +19,6 @@ const data = [
     level: 85,
     fullMark: 100,
   },
-
   {
     subject: 'C',
     level: 95,
@@ -31,8 +30,8 @@ const data = [
     fullMark: 100,
   },
   {
-    subject: 'Verilog',
-    level: 70,
+    subject: 'Golang',
+    level: 85,
     fullMark: 100,
   },
   {
@@ -42,7 +41,7 @@ const data = [
   },
   {
     subject: 'Bash',
-    level: 71,
+    level: 75,
     fullMark: 100,
   },
 ];

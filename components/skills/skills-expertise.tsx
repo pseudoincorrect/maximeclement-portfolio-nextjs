@@ -6,7 +6,8 @@ export default function SkillsExpertiseData() {
         <li>Database SQL & NoSQL</li>
         <li>Serverless Cloud Architecture</li>
         <li>Container Architecture</li>
-        <li>Event Driven Architecture</li>
+        <li>Event Driven and message queuing Architecture</li>
+        <li>Parallel Processing </li>
         <li>Continuous Integration / Delivery and TDD</li>
         <li>Infrastructure as Code </li>
         <li>Cybersecurity (IoT standards)</li>

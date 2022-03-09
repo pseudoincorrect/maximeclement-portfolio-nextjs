@@ -350,16 +350,16 @@ function SkillsDescription() {
           </p>
           <ul style={{ textAlign: 'left' }}>
             <li>
-              <Bc> Typescript (or JS) </Bc> for backend development
+              <Bc> Golang or Typescript </Bc> for backend development
             </li>
             <li>
-              <Bc> Serverless (CDK) and Docker </Bc> as a backend architecture
+              <Bc> Serverless (CDK) </Bc>and <Bc> Containers (Docker) </Bc> for backend microservices
             </li>
             <li>
-              <Bc> React (or Angular) </Bc> on the frontend
+              <Bc> React (or sometimes Angular) </Bc> on the frontend
             </li>
             <li>
-              <Bc> AWS </Bc> for deployment and CI/CD
+              <Bc> AWS </Bc> for deployment and CI/CD (with <Bc>Gitlab</Bc>)
             </li>
             <li>
               <Bc> Python </Bc> for scripting, DSP prototyping, algorithms
@@ -370,6 +370,9 @@ function SkillsDescription() {
             </li>
             <li>
               <Bc> C </Bc> for firmware programming
+            </li>
+            <li>
+              <Bc> Bash </Bc> when shell scripts are needed
             </li>
             <li>
               <Bc> Altium (or Eagle) </Bc> for Printed Circuit Board design

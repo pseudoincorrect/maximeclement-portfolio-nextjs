@@ -36,7 +36,6 @@ interface ProjectCardProps {
   mainPictures: { path: string; alt: string }[];
   summary: string;
   details: string;
-  detailsPictures: { path: string; alt: string }[];
   tags: string;
   location: string;
   date: string;
@@ -63,7 +62,6 @@ export default function ProjectCard({
   mainPictures,
   summary,
   details,
-  detailsPictures,
   tags,
   location,
   date,
@@ -97,10 +95,6 @@ export default function ProjectCard({
         </AccordionSummary>
 
         <AccordionDetails>
-          <CarouselDiv>
-            <Carousel images={detailsPictures} />
-          </CarouselDiv>
-
           <HtmlTxtBox dangerouslySetInnerHTML={{ __html: details }} />
         </AccordionDetails>
       </Accordion>

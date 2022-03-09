@@ -34,7 +34,6 @@ const ProjectsPage: NextPage = () => {
             mainPictures={e.mainPictures}
             summary={e.summary}
             details={e.details}
-            detailsPictures={e.detailsPictures}
             tags={e.tags}
             location={e.location}
             date={e.date}

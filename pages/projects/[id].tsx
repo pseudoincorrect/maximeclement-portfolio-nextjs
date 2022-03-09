@@ -51,7 +51,6 @@ const ProjectsPage: NextPage = () => {
           mainPictures={project.mainPictures}
           summary={project.summary}
           details={project.details}
-          detailsPictures={project.detailsPictures}
           tags={project.tags}
           location={project.location}
           date={project.date}

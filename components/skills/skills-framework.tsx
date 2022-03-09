@@ -3,13 +3,13 @@ export default function SkillsFrameworkData() {
     <div>
       <div className='title-lvl-1'>Backend</div>
       <ul>
-        <li>AWS CDK Framework</li>
-        <li>Express Rest API</li>
-        <li>SQL Database (Postgresql)</li>
-        <li>NoSQL Database (DynamoDb, MongoDb)</li>
-        <li>NodeJs JavaScript runtime</li>
-        <li>Docker based app</li>
-        <li>AWS (Associate Developer Certified)</li>
+        <li>Microservices with Docker </li>
+        <li>AWS serverless with CDK Framework</li>
+        <li>SQL and NoSQL Database (Postgresql, DynamoDb, MongoDb...)</li>
+        <li>Timeseries Database (Influxdb, Timestream)</li>
+        <li>Rest API, gRPC API (Express and Golang)</li>
+        <li>NodeJs JavaScript runtime or Golang</li>
+        <li>Quite a few other backend techs/frameworks</li>
       </ul>
       <div className='title-lvl-1'>Frontend</div>
       <ul>
@@ -48,10 +48,11 @@ export default function SkillsFrameworkData() {
         <li>Altium Designer</li>
         <li>Eagle (Autodesk, Cadsoft)</li>
       </ul>
-      <div className='title-lvl-1'>Testing</div>
+      <div className='title-lvl-1'>Testing and CI/CD</div>
       <ul>
         <li>C Programming: Ceedling: Unity + Cmock + CException)</li>
         <li>Javascript: Jest, Jasmin, Karma</li>
+        <li>Gitlab, AWS CodePipeline</li>
       </ul>
       <div className='title-lvl-1'>Compiling and programming Tooling</div>
       <ul>
