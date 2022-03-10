@@ -2,8 +2,9 @@
   {
     "title": "BarIoT",
     "mainPictures": [
-      { "path": "/images/projects/bariot/bariot.jpg", "alt": "Bariot Logo" },
+      { "path": "/images/projects/bariot/thumbnail.jpg", "alt": "Bariot Logo" },
       { "path": "/images/projects/bariot/bariot_architecture.jpg", "alt": "Bariot Architecture" },
+      { "path": "/images/projects/bariot/bariot.jpg", "alt": "Bariot Logo" },
       { "path": "/images/projects/bariot/bariot_tools.jpg", "alt": "Bariot Tools" }
     ],
     "shortSummary": "IoT / IIoT platform with things/user management, storage and visualization, in Go with Docker using microservices. Scalable and secure !",
@@ -16,12 +17,13 @@
   {
     "title": "LoraWan Health V2",
     "mainPictures": [
-      { "path": "/images/projects/lorawanHealthV2/cloud_architecture.jpg", "alt": "LoraWan Health V2 AWS cloud architecture" },
+      { "path": "/images/projects/lorawanHealthV2/thumbnail.jpg", "alt": "LoraWan Health V2 AWS cloud architecture" },
       { "path": "/images/projects/lorawanHealthV2/circuit_garment.jpg", "alt": "Circuit Garment" },
       { "path": "/images/projects/lorawanHealthV2/circuit_1.jpg", "alt": "Circuit Break out" },
       { "path": "/images/projects/lorawanHealthV2/mobile_app.jpg", "alt": "Mobile_app" },
       { "path": "/images/projects/lorawanHealthV2/aws_cdk.jpg", "alt": "AWS CDK" },
       { "path": "/images/projects/lorawanHealthV2/debugging.jpg", "alt": "Debugging" },
+      { "path": "/images/projects/lorawanHealthV2/cloud_architecture.jpg", "alt": "LoraWan Health V2 AWS cloud architecture" },
       { "path": "/images/projects/lorawanHealthV2/circuit_garment_2.jpg", "alt": "Circuit garment" },
       { "path": "/images/projects/lorawanHealthV2/circuit_2.jpg", "alt": "Circuit" },
       { "path": "/images/projects/lorawanHealthV2/circuit_1.jpg", "alt": "Circuit" }
@@ -36,11 +38,12 @@
   {
     "title": "LoraWan Health V1",
     "mainPictures": [
-      { "path": "/images/projects/lorawanHealthOverview/architecture_1.png", "alt": "Lorawan Wristwatches architecture" },
+      { "path": "/images/projects/lorawanHealthOverview/thumbnail.png", "alt": "Lorawan Wristwatches architecture" },
       { "path": "/images/projects/lorawanHealthOverview/watch_pcb_1.png", "alt": "Wristwatch PCB" },
       { "path": "/images/projects/lorawanHealthOverview/app_1.png", "alt": "Mobile App" },
       { "path": "/images/projects/lorawanHealthOverview/app_2.png", "alt": "Mobile App graphs" },
       { "path": "/images/projects/lorawanHealthOverview/watch_pcb_2.png", "alt": "Rigid Flex PCB" },
+      { "path": "/images/projects/lorawanHealthOverview/architecture_1.png", "alt": "Lorawan Wristwatches architecture" },
       { "path": "/images/projects/lorawanHealthOverview/app_3.png", "alt": "Mobile App graph" },
       { "path": "/images/projects/lorawanHealthOverview/architecture_2.png", "alt": "Cloud Architecture" }
     ],
@@ -135,10 +138,11 @@
   {
     "title": "Wearable with GUI",
     "mainPictures": [
-      { "path": "/images/projects/bluetoothHealth/pcb_hand.jpg", "alt": "PCB of the wearable" },
+      { "path": "/images/projects/bluetoothHealth/thumbnail.jpg", "alt": "PCB of the wearable" },
       { "path": "/images/projects/bluetoothHealth/gui.jpg", "alt": "GUI made with pyQt" },
       { "path": "/images/projects/bluetoothHealth/pcb_gui.jpg", "alt": "PCB and GUI with pyQt" },
       { "path": "/images/projects/bluetoothHealth/pcb.jpg", "alt": "Embedded system assembled" },
+      { "path": "/images/projects/bluetoothHealth/pcb_hand.jpg", "alt": "PCB of the wearable" },
       { "path": "/images/projects/bluetoothHealth/wearable.jpg", "alt": "PCB and jacket" },
       { "path": "/images/projects/bluetoothHealth/cad.png", "alt": "PCB files" }
     ],
