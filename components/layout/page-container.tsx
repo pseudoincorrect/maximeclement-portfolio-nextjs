@@ -35,8 +35,9 @@ export default function PageContainer(props: PageBoxProps) {
     <Box>
       <ImageBox>
         <Image
+          priority={true}
           placeholder='blur'
-          blurDataURL='/images/image_loader.jpg'
+          blurDataURL={imagePath}
           alt='page background'
           loading='eager'
           src={imagePath}

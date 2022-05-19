@@ -160,7 +160,6 @@ function Presentation() {
           placeholder='blur'
           blurDataURL='/images/home/max_pict.jpg'
           alt='Maxime Clement Iot Engineer'
-          priority={true}
           src='/images/home/max_pict.jpg'
           layout='fill'
           objectFit='cover'
@@ -242,7 +241,6 @@ function IotDescription() {
               placeholder='blur'
               blurDataURL='/images/image_loader.jpg'
               alt='IoT Device'
-              priority={true}
               src='/images/home/echo_dot.jpg'
               layout='fill'
               objectFit='cover'
@@ -299,7 +297,6 @@ function ToolsDescription() {
               placeholder='blur'
               blurDataURL='/images/image_loader.jpg'
               alt='Maxime Clement'
-              priority={true}
               src='/images/home/iot_diagram.jpg'
               layout='fill'
               objectFit='cover'
@@ -353,7 +350,8 @@ function SkillsDescription() {
               <Bc> Golang or Typescript </Bc> for backend development
             </li>
             <li>
-              <Bc> Serverless (CDK) </Bc>and <Bc> Containers (Docker) </Bc> for backend microservices
+              <Bc> Serverless (CDK) </Bc>and <Bc> Containers (Docker) </Bc> for
+              backend microservices
             </li>
             <li>
               <Bc> React (or sometimes Angular) </Bc> on the frontend
@@ -393,7 +391,6 @@ function SkillsDescription() {
               placeholder='blur'
               blurDataURL='/images/image_loader.jpg'
               alt='Maxime Clement'
-              priority={true}
               src='/images/home/programming_languages.jpg'
               layout='fill'
               objectFit='cover'

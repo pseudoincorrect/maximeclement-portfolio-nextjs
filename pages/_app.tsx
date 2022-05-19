@@ -5,8 +5,6 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { AppProps } from 'next/app';
-import Head from 'next/head';
-import { Fragment } from 'react';
 
 import MainLayout from '../components/layout/main-layout';
 import createEmotionCache from '../helpers/createEmotionCache';
